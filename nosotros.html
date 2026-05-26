@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Nosotros | EQUIM | GRUMO</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta
+        name="description"
+        content="Historia, experiencia y enfoque técnico de EQUIM como grupo empresarial colombiano especializado en soluciones para la agroindustria."
+    >
+    <meta property="og:site_name" content="EQUIM | GRUMO">
+    <meta property="og:locale" content="es_CO">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Nosotros | EQUIM | GRUMO">
+    <meta property="og:description" content="Historia, experiencia y enfoque técnico de EQUIM como grupo empresarial colombiano especializado en soluciones para la agroindustria.">
+    <meta property="og:image" content="./assets/equim-team/javier-osma.png">
+    <meta property="og:image:alt" content="Equipo visible de EQUIM en la coordinación de proyectos">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nosotros | EQUIM | GRUMO">
+    <meta name="twitter:description" content="Historia, experiencia y enfoque técnico de EQUIM como grupo empresarial colombiano especializado en soluciones para la agroindustria.">
+    <meta name="twitter:image" content="./assets/equim-team/javier-osma.png">
+    <link rel="icon" type="image/svg+xml" href="./assets/equim-brand/equim-favicon.svg">
+    <link rel="shortcut icon" href="./assets/equim-brand/equim-favicon.svg">
+    <link href="./css/vendors/aos.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+    <link href="./equim.css" rel="stylesheet">
+</head>
+<body class="font-inter antialiased text-slate-900 tracking-tight">
+    <div class="site-shell">
+        <header class="site-header">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                <div class="flex items-center justify-between h-16 md:h-20">
+                    <a class="brand-lockup" href="index.html" aria-label="EQUIM y GRUMO">
+                        <img class="brand-logo" src="./assets/equim-brand/equim-grumo-header-original.png" alt="EQUIM y GRUMO">
+                    </a>
+                    <nav class="hidden md:flex md:items-center md:gap-2" aria-label="Navegación principal" data-site-nav="about"></nav>
+                    <div class="flex md:hidden" x-data="{ expanded: false }">
+                        <button class="mobile-toggle" aria-controls="mobile-nav" :aria-expanded="expanded" @click.stop="expanded = !expanded">
+                            <span class="sr-only">Abrir menú</span>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                <rect y="2" width="16" height="2" rx="1"></rect>
+                                <rect y="7" width="16" height="2" rx="1"></rect>
+                                <rect y="12" width="16" height="2" rx="1"></rect>
+                            </svg>
+                        </button>
+                        <nav
+                            id="mobile-nav"
+                            class="mobile-nav-panel"
+                            @click.away="expanded = false"
+                            @keydown.escape.window="expanded = false"
+                            x-show="expanded"
+                            x-transition:enter="transition ease-out duration-200 transform"
+                            x-transition:enter-start="opacity-0 -translate-y-2"
+                            x-transition:enter-end="opacity-100 translate-y-0"
+                            x-transition:leave="transition ease-out duration-150"
+                            x-transition:leave-start="opacity-100"
+                            x-transition:leave-end="opacity-0"
+                            x-cloak
+                            data-mobile-nav="about"
+                        ></nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="page-hero">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                    <span class="eyebrow">Nosotros</span>
+                    <h1 class="page-title font-playfair-display">Más de cinco décadas de experiencia aplicadas al desarrollo de soluciones industriales.</h1>
+                    <p class="page-intro">
+                        EQUIM es un grupo empresarial colombiano especializado en diseño, fabricación y montaje de equipos para proyectos agroindustriales, soluciones portuarias y servicios de izaje.
+                    </p>
+                </div>
+            </section>
+
+            <section class="section-shell">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                    <div class="two-column-story">
+                        <div class="surface-card">
+                            <span class="eyebrow">Historia</span>
+                            <h2 class="h3 font-playfair-display">Trayectoria al servicio de la agroindustria.</h2>
+                            <p>
+                                EQUIM concentra su experiencia en el desarrollo de equipos para recibo, elevación, transporte, pre-limpieza, limpieza, secamiento, almacenamiento y molinería de arroz, así como soluciones para el manejo, despacho y almacenamiento de granos en puertos marítimos.
+                            </p>
+                            <p>
+                                La empresa ha trabajado durante más de 50 años en la producción y montaje de soluciones para el sector, manteniendo una combinación valiosa entre ingeniería, fabricación y ejecución en campo.
+                            </p>
+                        </div>
+                        <div class="surface-card surface-card-accent">
+                            <span class="eyebrow">Mejora continua</span>
+                            <h2 class="h3 font-playfair-display">Capacidad técnica con visión de largo plazo.</h2>
+                            <p>
+                                Trabajamos en mejora continua para contribuir al crecimiento y fortalecimiento de la agroindustria a nivel nacional e internacional, con un enfoque orientado a la confiabilidad y al desempeño del proceso.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-shell stats-band">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                    <div class="stats-strip">
+                        <article>
+                            <strong>50+ años</strong>
+                            <span>Experiencia acumulada en soluciones para procesos agroindustriales.</span>
+                        </article>
+                        <article>
+                            <strong>Bucaramanga</strong>
+                            <span>Fábrica y oficinas con atención para clientes nacionales e internacionales.</span>
+                        </article>
+                        <article>
+                            <strong>Mejora continua</strong>
+                            <span>Desarrollo técnico y operativo orientado a fortalecer la agroindustria.</span>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-shell section-soft">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                    <div class="section-heading">
+                        <span class="eyebrow">Enfoque</span>
+                        <h2 class="h2 font-playfair-display">La empresa se entiende mejor cuando se presenta por capacidades y sectores.</h2>
+                    </div>
+                    <div class="capability-grid">
+                        <article class="surface-card">
+                            <span class="card-index">01</span>
+                            <h3 class="h4 font-playfair-display">Procesos agroindustriales</h3>
+                            <p>Experiencia en elevación, transporte, pre-limpieza, limpieza, secamiento, almacenamiento y molinería de arroz.</p>
+                        </article>
+                        <article class="surface-card">
+                            <span class="card-index">02</span>
+                            <h3 class="h4 font-playfair-display">Operación portuaria</h3>
+                            <p>Desarrollo de soluciones para manejo y despacho de granos a granel en puertos marítimos.</p>
+                        </article>
+                        <article class="surface-card">
+                            <span class="card-index">03</span>
+                            <h3 class="h4 font-playfair-display">Ejecución en campo</h3>
+                            <p>Montaje e izaje con equipos propios y personal calificado para tareas de movilización y armado de estructuras y equipos.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-shell">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                    <div class="section-heading">
+                        <span class="eyebrow">Equipo visible</span>
+                        <h2 class="h2 font-playfair-display">Dirección, coordinación y soporte técnico de proyectos.</h2>
+                    </div>
+                    <div class="team-grid">
+                        <article class="surface-card">
+                            <img class="team-portrait" src="./assets/equim-team/hernando-sandoval.png" alt="Hernando Sandoval">
+                            <strong class="team-role">Gerencia general</strong>
+                            <h3 class="h4 font-playfair-display">Hernando Sandoval</h3>
+                            <p>Socio fundador y gerente general de EQUIM, con trayectoria asociada al crecimiento de la empresa en el sector.</p>
+                        </article>
+                        <article class="surface-card">
+                            <img class="team-portrait" src="./assets/equim-team/javier-osma.png" alt="Javier Osma">
+                            <strong class="team-role">Proyectos y logística</strong>
+                            <h3 class="h4 font-playfair-display">Javier Osma</h3>
+                            <p>Director de proyectos y logística, con un rol central en la coordinación operativa y la ejecución de montajes.</p>
+                        </article>
+                        <article class="surface-card">
+                            <img class="team-portrait" src="./assets/equim-team/luis-garcia.png" alt="Luis Garcia">
+                            <strong class="team-role">Diseño e ingeniería</strong>
+                            <h3 class="h4 font-playfair-display">Luis Garcia</h3>
+                            <p>Apoyo visible en diseño e ingeniería para el desarrollo y ajuste técnico de soluciones dentro de los proyectos de EQUIM.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                <div class="footer-grid" data-footer-variant="about"></div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="./js/vendors/alpinejs.min.js" defer></script>
+    <script src="./js/vendors/aos.js"></script>
+    <script src="./js/site-data.js"></script>
+    <script src="./js/site-render.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

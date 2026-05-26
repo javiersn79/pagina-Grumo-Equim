@@ -1,0 +1,7 @@
+<svg width="620" height="170" viewBox="0 0 620 170" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="620" height="170" rx="16" fill="white"/>
+  <rect x="28" y="25" width="110" height="120" rx="10" fill="#8CC800"/>
+  <path d="M54 126V54C54 42 64 32 76 32H122V56H88C81 56 76 61 76 68V90H118V112H76V126H54Z" fill="#111111"/>
+  <path d="M114 126V54H136V80H158V98H136V126H114Z" fill="white"/>
+  <text x="174" y="106" fill="#111111" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="66" letter-spacing="1">FACTOTAL</text>
+</svg>

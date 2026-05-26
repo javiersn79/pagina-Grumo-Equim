@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Detalle de proyecto | EQUIM | GRUMO</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta
+        name="description"
+        content="Detalle individual de proyecto de EQUIM generado a partir del catálogo local."
+    >
+    <meta property="og:site_name" content="EQUIM | GRUMO">
+    <meta property="og:locale" content="es_CO">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Detalle de proyecto | EQUIM | GRUMO">
+    <meta property="og:description" content="Detalle individual de proyecto de EQUIM generado a partir del catálogo local.">
+    <meta property="og:image" content="./assets/equim-projects/montaje-transportador-silos.jpg">
+    <meta property="og:image:alt" content="Proyecto documentado dentro del catálogo local de EQUIM">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Detalle de proyecto | EQUIM | GRUMO">
+    <meta name="twitter:description" content="Detalle individual de proyecto de EQUIM generado a partir del catálogo local.">
+    <meta name="twitter:image" content="./assets/equim-projects/montaje-transportador-silos.jpg">
+    <link rel="icon" type="image/svg+xml" href="./assets/equim-brand/equim-favicon.svg">
+    <link rel="shortcut icon" href="./assets/equim-brand/equim-favicon.svg">
+    <link href="./css/vendors/aos.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+    <link href="./equim.css" rel="stylesheet">
+</head>
+<body class="font-inter antialiased text-slate-900 tracking-tight">
+    <div class="site-shell">
+        <header class="site-header">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                <div class="flex items-center justify-between h-16 md:h-20">
+                    <a class="brand-lockup" href="index.html" aria-label="EQUIM y GRUMO">
+                        <img class="brand-logo" src="./assets/equim-brand/equim-grumo-header-original.png" alt="EQUIM y GRUMO">
+                    </a>
+                    <nav class="hidden md:flex md:items-center md:gap-2" aria-label="Navegación principal" data-site-nav="projects"></nav>
+                    <div class="flex md:hidden" x-data="{ expanded: false }">
+                        <button class="mobile-toggle" aria-controls="mobile-nav" :aria-expanded="expanded" @click.stop="expanded = !expanded">
+                            <span class="sr-only">Abrir menú</span>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                <rect y="2" width="16" height="2" rx="1"></rect>
+                                <rect y="7" width="16" height="2" rx="1"></rect>
+                                <rect y="12" width="16" height="2" rx="1"></rect>
+                            </svg>
+                        </button>
+                        <nav
+                            id="mobile-nav"
+                            class="mobile-nav-panel"
+                            @click.away="expanded = false"
+                            @keydown.escape.window="expanded = false"
+                            x-show="expanded"
+                            x-transition:enter="transition ease-out duration-200 transform"
+                            x-transition:enter-start="opacity-0 -translate-y-2"
+                            x-transition:enter-end="opacity-100 translate-y-0"
+                            x-transition:leave="transition ease-out duration-150"
+                            x-transition:leave-start="opacity-100"
+                            x-transition:leave-end="opacity-0"
+                            x-cloak
+                            data-mobile-nav="projects"
+                        ></nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="page-hero">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                    <a class="text-link" href="proyectos.html">Volver al catálogo</a>
+                    <span class="eyebrow">Detalle de proyecto</span>
+                    <h1 class="page-title font-playfair-display" data-project-title>Proyecto</h1>
+                    <p class="page-intro">
+                        Información general del proyecto o equipo documentado dentro del catálogo de soluciones de EQUIM.
+                    </p>
+                </div>
+            </section>
+
+            <section class="section-shell">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                    <div data-project-detail></div>
+                </div>
+            </section>
+
+            <section class="section-shell section-soft">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                    <div class="section-heading">
+                        <span class="eyebrow">Relacionados</span>
+                        <h2 class="h2 font-playfair-display">Otros proyectos del catálogo.</h2>
+                    </div>
+                    <div class="project-grid" data-project-related="3"></div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                <div class="footer-grid" data-footer-variant="project"></div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="./js/vendors/alpinejs.min.js" defer></script>
+    <script src="./js/vendors/aos.js"></script>
+    <script src="./js/site-data.js"></script>
+    <script src="./js/site-render.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/proyectos-data.js"></script>
+    <script src="./js/proyectos.js"></script>
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>EQUIM | GRUMO | Soluciones para agroindustria, puertos e izaje</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta
+        name="description"
+        content="Diseño, fabricación y montaje de equipos para agroindustria, silos, graneles, puertos e izaje con experiencia de campo."
+    >
+    <meta property="og:site_name" content="EQUIM | GRUMO">
+    <meta property="og:locale" content="es_CO">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="EQUIM | GRUMO | Soluciones para agroindustria, puertos e izaje">
+    <meta property="og:description" content="Diseño, fabricación y montaje de equipos para agroindustria, silos, graneles, puertos e izaje con experiencia de campo.">
+    <meta property="og:image" content="./assets/equim-projects/montaje-transportador-silos.jpg">
+    <meta property="og:image:alt" content="Montaje industrial con silos y transportador en proyecto de EQUIM">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="EQUIM | GRUMO | Soluciones para agroindustria, puertos e izaje">
+    <meta name="twitter:description" content="Diseño, fabricación y montaje de equipos para agroindustria, silos, graneles, puertos e izaje con experiencia de campo.">
+    <meta name="twitter:image" content="./assets/equim-projects/montaje-transportador-silos.jpg">
+    <link rel="icon" type="image/svg+xml" href="./assets/equim-brand/equim-favicon.svg">
+    <link rel="shortcut icon" href="./assets/equim-brand/equim-favicon.svg">
+    <link href="./css/vendors/aos.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+    <link href="./equim.css" rel="stylesheet">
+</head>
+<body class="font-inter antialiased text-slate-900 tracking-tight">
+    <div class="site-shell">
+        <header class="site-header">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                <div class="flex items-center justify-between h-16 md:h-20">
+                    <a class="brand-lockup" href="index.html" aria-label="EQUIM y GRUMO">
+                        <img class="brand-logo" src="./assets/equim-brand/equim-grumo-header-original.png" alt="EQUIM y GRUMO">
+                    </a>
+                    <nav class="hidden md:flex md:items-center md:gap-2" aria-label="Navegación principal" data-site-nav="home"></nav>
+                    <div class="hidden md:block">
+                        <a class="btn-primary" href="contacto.html">Hablar con EQUIM</a>
+                    </div>
+                    <div class="flex md:hidden" x-data="{ expanded: false }">
+                        <button class="mobile-toggle" aria-controls="mobile-nav" :aria-expanded="expanded" @click.stop="expanded = !expanded">
+                            <span class="sr-only">Abrir menú</span>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                <rect y="2" width="16" height="2" rx="1"></rect>
+                                <rect y="7" width="16" height="2" rx="1"></rect>
+                                <rect y="12" width="16" height="2" rx="1"></rect>
+                            </svg>
+                        </button>
+                        <nav
+                            id="mobile-nav"
+                            class="mobile-nav-panel"
+                            @click.away="expanded = false"
+                            @keydown.escape.window="expanded = false"
+                            x-show="expanded"
+                            x-transition:enter="transition ease-out duration-200 transform"
+                            x-transition:enter-start="opacity-0 -translate-y-2"
+                            x-transition:enter-end="opacity-100 translate-y-0"
+                            x-transition:leave="transition ease-out duration-150"
+                            x-transition:leave-start="opacity-100"
+                            x-transition:leave-end="opacity-0"
+                            x-cloak
+                            data-mobile-nav="home"
+                        ></nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero-section">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                    <div class="hero-grid">
+                        <div data-aos="fade-right">
+                            <span class="eyebrow">Más de 50 años brindando soluciones a la agroindustria</span>
+                            <h1 class="hero-title font-playfair-display">Soluciones para cereales, puertos e izaje con criterio técnico y experiencia de campo.</h1>
+                            <p class="hero-copy">
+                                EQUIM es un grupo empresarial colombiano especializado en el diseño, fabricación y montaje de equipos para proyectos agroindustriales, manejo y despacho de granos en puertos marítimos y servicios de izaje, manipulación y movilización de carga y equipos.
+                            </p>
+                            <div class="hero-actions">
+                                <a class="btn-primary" href="soluciones.html">Ver soluciones</a>
+                                <a class="btn-secondary" href="proyectos.html">Explorar proyectos</a>
+                            </div>
+                            <ul class="hero-pills" aria-label="Cobertura de trabajo">
+                                <li>Diseño</li>
+                                <li>Fabricación</li>
+                                <li>Montaje</li>
+                                <li>Agroindustria</li>
+                                <li>Puertos</li>
+                                <li>Izaje</li>
+                            </ul>
+                        </div>
+                        <div class="hero-visual-cluster" data-aos="fade-left">
+                            <figure class="hero-visual hero-visual-main hero-visual-translucent">
+                                <img
+                                    class="hero-image-silos hero-image-silos-main"
+                                    src="./assets/equim-hero/hero-silos-gemini.png"
+                                    alt="Silos de almacenamiento y torre de proceso en instalación agroindustrial"
+                                >
+                            </figure>
+                            <figure class="hero-visual hero-visual-offset hero-visual-support">
+                                <img
+                                    class="hero-image-crane hero-image-crane-offset"
+                                    src="./assets/equim-hero/hero-grua-tolvas.jpg"
+                                    alt="Montaje de tolvas industriales con grúa telescópica en operación de EQUIM"
+                                >
+                            </figure>
+                            <div class="hero-panel">
+                                <span class="eyebrow">Almacenamiento, montaje y operación real</span>
+                                <h2 class="h3 font-playfair-display">Infraestructura industrial visible desde el primer golpe de vista.</h2>
+                                <p>
+                                    Silos, torres de proceso, izaje y montaje en campo muestran mejor el alcance real de EQUIM: soluciones donde almacenamiento, fabricación e instalación se integran en una misma ejecución.
+                                </p>
+                                <div class="hero-metrics">
+                                    <article>
+                                        <strong>50+</strong>
+                                        <span>Años de experiencia acumulada</span>
+                                    </article>
+                                    <article>
+                                        <strong>3</strong>
+                                        <span>Frentes integrados: agroindustria, puertos e izaje</span>
+                                    </article>
+                                    <article>
+                                        <strong>BGA</strong>
+                                        <span>Base operativa en Bucaramanga</span>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-shell stats-band">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                    <div class="stats-strip">
+                        <article>
+                            <strong>Agroindustria</strong>
+                            <span>Equipos para procesos de cereales, secamiento, almacenamiento y molinería.</span>
+                        </article>
+                        <article>
+                            <strong>Puertos</strong>
+                            <span>Soluciones para manejo, despacho y almacenamiento de granos a granel.</span>
+                        </article>
+                        <article>
+                            <strong>Izaje</strong>
+                            <span>Flota propia y apoyo operativo para montaje, manipulación y movilización.</span>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-shell">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                    <div class="section-heading">
+                        <span class="eyebrow">Capacidades principales</span>
+                        <h2 class="h2 font-playfair-display">Diseño, fabricación y montaje integrados en una sola capacidad operativa.</h2>
+                        <p>
+                            Desde la ingeniería hasta la puesta en operación, EQUIM integra diseño, fabricación y montaje para responder a necesidades industriales concretas.
+                        </p>
+                    </div>
+                    <div class="capability-grid">
+                        <article class="surface-card" data-aos="fade-up">
+                            <span class="card-index">01</span>
+                            <h3 class="h4 font-playfair-display">Diseño</h3>
+                            <p>Desarrollo de soluciones para elevación, transporte, pre-limpieza, limpieza, secamiento, almacenamiento y apoyo operativo.</p>
+                        </article>
+                        <article class="surface-card" data-aos="fade-up" data-aos-delay="80">
+                            <span class="card-index">02</span>
+                            <h3 class="h4 font-playfair-display">Fabricación</h3>
+                            <p>Construcción de equipos y estructuras para procesos agroindustriales y manejo de graneles con criterio técnico y enfoque de operación real.</p>
+                        </article>
+                        <article class="surface-card" data-aos="fade-up" data-aos-delay="160">
+                            <span class="card-index">03</span>
+                            <h3 class="h4 font-playfair-display">Montaje</h3>
+                            <p>Servicios de montaje, movilización y apoyo en campo con flota propia de grúas telescópicas, camión grúas y equipos auxiliares.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-shell section-soft">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                    <div class="section-heading">
+                        <span class="eyebrow">Líneas de solución</span>
+                        <h2 class="h2 font-playfair-display">Soluciones organizadas según la necesidad de operación.</h2>
+                        <p>
+                            La experiencia de EQUIM se concentra en sectores donde la continuidad operativa y la confiabilidad del equipo sí importan.
+                        </p>
+                    </div>
+                    <div class="solution-grid">
+                        <article class="solution-card" data-aos="fade-up">
+                            <span class="solution-tag">Cereales</span>
+                            <h3 class="h4 font-playfair-display">Equipos para procesos agroindustriales</h3>
+                            <p>Recibo, elevación, transporte, pre-limpieza, limpieza, secamiento, almacenamiento y molinería de arroz.</p>
+                            <a href="soluciones.html#cereales">Ver esta línea</a>
+                        </article>
+                        <article class="solution-card" data-aos="fade-up" data-aos-delay="80">
+                            <span class="solution-tag">Puertos</span>
+                            <h3 class="h4 font-playfair-display">Manejo y transporte de granos en puerto marítimo</h3>
+                            <p>Tolvas graneleras, elevadores, transportadores y equipos para despacho y almacenamiento de graneles.</p>
+                            <a href="soluciones.html#puertos">Ver esta línea</a>
+                        </article>
+                        <article class="solution-card" data-aos="fade-up" data-aos-delay="160">
+                            <span class="solution-tag">Izaje</span>
+                            <h3 class="h4 font-playfair-display">Servicios de izaje, manipulación y montaje</h3>
+                            <p>Grúas telescópicas, camión grúas y apoyo operativo para proyectos de montaje en agroindustria y otros sectores.</p>
+                            <a href="soluciones.html#izaje">Ver esta línea</a>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-shell">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                    <div class="section-heading split-heading">
+                        <div>
+                            <span class="eyebrow">Proyectos destacados</span>
+                            <h2 class="h2 font-playfair-display">Experiencia visible en proyectos documentados.</h2>
+                        </div>
+                        <a class="text-link" href="proyectos.html">Ver todos los proyectos</a>
+                    </div>
+                    <div class="project-grid" data-project-featured="3"></div>
+                </div>
+            </section>
+
+            <section class="section-shell section-dark section-dark-texture">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                    <div class="section-heading section-heading-dark">
+                        <span class="eyebrow">Clientes y trayectoria</span>
+                        <h2 class="h2 font-playfair-display">Relaciones construidas con empresas del sector agroindustrial y logístico.</h2>
+                        <p>
+                            EQUIM ha trabajado con empresas y operaciones vinculadas a arroz, graneles, almacenamiento, logística y exportación tanto en Colombia como en otros mercados.
+                        </p>
+                    </div>
+                    <div class="client-grid" data-client-grid></div>
+                    <div class="story-grid">
+                        <article class="story-panel">
+                            <span class="eyebrow">Nosotros</span>
+                            <h3 class="h3 font-playfair-display">Experiencia acumulada al servicio de la agroindustria.</h3>
+                            <p>
+                                Somos un grupo empresarial colombiano especializado en soluciones para proyectos agroindustriales, con trabajo sostenido en mejora continua para contribuir al crecimiento y fortalecimiento del sector a nivel nacional e internacional.
+                            </p>
+                            <a class="btn-secondary" href="nosotros.html">Conocer la empresa</a>
+                        </article>
+                        <article class="story-panel story-panel-accent">
+                            <span class="eyebrow">Contacto</span>
+                            <h3 class="h3 font-playfair-display">Atención directa para proyectos, cotizaciones y soporte comercial.</h3>
+                            <p>
+                                Fábrica y oficinas en Bucaramanga, con atención para ventas, información general y acompañamiento comercial según el tipo de proyecto.
+                            </p>
+                            <a class="btn-primary" href="contacto.html">Ver datos de contacto</a>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-shell">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                    <div data-cta-variant="homeContact"></div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                <div class="footer-grid" data-footer-variant="home"></div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="./js/vendors/alpinejs.min.js" defer></script>
+    <script src="./js/vendors/aos.js"></script>
+    <script src="./js/site-data.js"></script>
+    <script src="./js/site-render.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/proyectos-data.js"></script>
+    <script src="./js/proyectos.js"></script>
+</body>
+</html>

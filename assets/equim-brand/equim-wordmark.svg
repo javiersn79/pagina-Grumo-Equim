@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="348" height="84" viewBox="0 0 348 84" fill="none">
+  <rect width="84" height="84" rx="24" fill="#132229"/>
+  <path d="M28 24H59V32H37V41H56V49H37V60H59V68H28V24Z" fill="#F6F2E9"/>
+  <path d="M56.5 24L67 24L54 44L67 68H56.4L43.5 44.2L56.5 24Z" fill="#D8872F"/>
+  <path d="M106 25H164V35H118V42H159V51.5H118V59H165V69H106V25Z" fill="#132229"/>
+  <path d="M177 25H190L214 55V25H226V69H214L189 38V69H177V25Z" fill="#132229"/>
+  <path d="M239 25H252V69H239V25Z" fill="#132229"/>
+  <path d="M265 25H278L292 48L306 25H319V69H307V43.8L295.8 62H287.9L277 43.9V69H265V25Z" fill="#132229"/>
+  <path d="M331 25H344V69H331V25Z" fill="#132229"/>
+  <text x="105" y="80" fill="#5E6C72" font-family="Arial, Helvetica, sans-serif" font-size="12" letter-spacing="2.4">EQUIPOS Y MONTAJES</text>
+</svg>

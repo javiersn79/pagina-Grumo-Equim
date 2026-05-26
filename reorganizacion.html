@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Reorganización | EQUIM | GRUMO</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta
+        name="description"
+        content="Página institucional secundaria para documentos del proceso de reorganización de EQUIM."
+    >
+    <meta property="og:site_name" content="EQUIM | GRUMO">
+    <meta property="og:locale" content="es_CO">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Reorganización | EQUIM | GRUMO">
+    <meta property="og:description" content="Página institucional secundaria para documentos del proceso de reorganización de EQUIM.">
+    <meta property="og:image" content="./assets/equim-brand/equim-grumo-header-original.png">
+    <meta property="og:image:alt" content="Marca de EQUIM y GRUMO">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Reorganización | EQUIM | GRUMO">
+    <meta name="twitter:description" content="Página institucional secundaria para documentos del proceso de reorganización de EQUIM.">
+    <meta name="twitter:image" content="./assets/equim-brand/equim-grumo-header-original.png">
+    <link rel="icon" type="image/svg+xml" href="./assets/equim-brand/equim-favicon.svg">
+    <link rel="shortcut icon" href="./assets/equim-brand/equim-favicon.svg">
+    <link href="./css/vendors/aos.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+    <link href="./equim.css" rel="stylesheet">
+</head>
+<body class="font-inter antialiased text-slate-900 tracking-tight">
+    <div class="site-shell">
+        <header class="site-header">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                <div class="flex items-center justify-between h-16 md:h-20">
+                    <a class="brand-lockup" href="index.html" aria-label="EQUIM y GRUMO">
+                        <img class="brand-logo" src="./assets/equim-brand/equim-grumo-header-original.png" alt="EQUIM y GRUMO">
+                    </a>
+                    <nav class="hidden md:flex md:items-center md:gap-2" aria-label="Navegación principal" data-site-nav="secondary"></nav>
+                    <div class="flex md:hidden" x-data="{ expanded: false }">
+                        <button class="mobile-toggle" aria-controls="mobile-nav" :aria-expanded="expanded" @click.stop="expanded = !expanded">
+                            <span class="sr-only">Abrir menú</span>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                <rect y="2" width="16" height="2" rx="1"></rect>
+                                <rect y="7" width="16" height="2" rx="1"></rect>
+                                <rect y="12" width="16" height="2" rx="1"></rect>
+                            </svg>
+                        </button>
+                        <nav
+                            id="mobile-nav"
+                            class="mobile-nav-panel"
+                            @click.away="expanded = false"
+                            @keydown.escape.window="expanded = false"
+                            x-show="expanded"
+                            x-transition:enter="transition ease-out duration-200 transform"
+                            x-transition:enter-start="opacity-0 -translate-y-2"
+                            x-transition:enter-end="opacity-100 translate-y-0"
+                            x-transition:leave="transition ease-out duration-150"
+                            x-transition:leave-start="opacity-100"
+                            x-transition:leave-end="opacity-0"
+                            x-cloak
+                            data-mobile-nav="secondary"
+                        ></nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="page-hero">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                    <span class="eyebrow">Información institucional</span>
+                    <h1 class="page-title font-playfair-display">Reorganización</h1>
+                    <p class="page-intro">
+                        Documentos públicos y referencias del proceso de reorganización de EQUIM Equipos y Montajes S.A.S.
+                    </p>
+                </div>
+            </section>
+
+            <section class="section-shell">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6">
+                    <div class="document-list" data-reorganization-docs></div>
+
+                    <article class="surface-card mt-8">
+                        <span class="eyebrow">Contacto para este tema</span>
+                        <p data-reorganization-contact></p>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                <div class="footer-grid" data-footer-variant="reorganization"></div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="./js/vendors/alpinejs.min.js" defer></script>
+    <script src="./js/vendors/aos.js"></script>
+    <script src="./js/site-data.js"></script>
+    <script src="./js/site-render.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
