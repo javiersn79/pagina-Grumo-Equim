@@ -44,13 +44,13 @@ window.EQUIM_SITE = {
     { name: "Almagrario", sector: "Logística y almacenamiento", logo: "./assets/equim-clients/almagrario.jpg" },
     { name: "Boluga", sector: "Agroindustria", logo: "./assets/equim-clients/boluga.jpg" },
     { name: "Arroz Sonora", sector: "Molinería y cereal", logo: "./assets/equim-clients/arroz-sonora.jpg" },
-    { name: "Icoharinas", sector: "Procesamiento de harina", logo: "./assets/equim-clients/icoharinas.jpg" },
     { name: "Grandelca", sector: "Granos y almacenamiento", logo: "./assets/equim-clients/grandelca.jpg" },
-    { name: "Agrinal", sector: "Procesos agrícolas", logo: "./assets/equim-clients/agrinal.jpg" },
     { name: "G&C", sector: "Servicios industriales", logo: "./assets/equim-clients/gc.jpg" },
-    { name: "Oleodavila", sector: "Logística y carga", logo: "./assets/equim-clients/oleodavila.jpg" },
     { name: "Pronaca", sector: "Operación regional", logo: "./assets/equim-clients/pronaca.jpg" },
-    { name: "ORF", sector: "Molinería de arroz", logo: "./assets/equim-clients/orf.jpg" }
+    { name: "ORF", sector: "Molinería de arroz", logo: "./assets/equim-clients/orf.jpg" },
+    { name: "Puerto Antioquia", sector: "Operación portuaria", logo: "./assets/equim-clients/puerto-antioquia.png" },
+    { name: "Aliar", sector: "Agroindustria", logo: "./assets/equim-clients/aliar.png" },
+    { name: "La Fazenda", sector: "Agroindustria", logo: "./assets/equim-clients/la-fazenda.png" }
   ],
   contact: {
     city: "Bucaramanga, Colombia",

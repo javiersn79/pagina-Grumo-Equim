@@ -479,15 +479,16 @@ body::before {
     display: grid;
     place-items: center;
     min-height: 7rem;
+    padding: 0.65rem;
     border-radius: 0.85rem;
     background: #fff;
 }
 
 .client-logo {
     display: block;
-    width: auto;
+    width: min(100%, 11rem);
     max-width: 100%;
-    max-height: 6.2rem;
+    max-height: 5.4rem;
     object-fit: contain;
 }
 
