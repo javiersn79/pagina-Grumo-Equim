@@ -19,12 +19,22 @@ window.EQUIM_PROJECTS = [
   },
   {
     title: "Horno ciclónico con secadora de torre",
-    photo: "./assets/equim-projects/horno-ciclonico.jpg",
+    photo: "./assets/equim-projects/horno-ciclonico-1.png",
     summary: "Integración de quemador de biomasa en suspensión para sistemas de secamiento dentro de procesos de cereales.",
     location: "Colombia",
     client: "Varios clientes",
     category: "cereales",
-    featured: true
+    featured: true,
+    images: [
+      "./assets/equim-projects/horno-ciclonico-2.png",
+      "./assets/equim-projects/horno-ciclonico-3.png",
+      "./assets/equim-projects/horno-ciclonico-4.png",
+      "./assets/equim-projects/horno-ciclonico-5.png"
+    ],
+    brochures: [
+      { label: "Brochure Español", href: "./assets/equim-docs/brochure-horno-ciclonico-es.pdf" },
+      { label: "Brochure English", href: "./assets/equim-docs/brochure-horno-ciclonico-en.pdf" }
+    ]
   },
   {
     title: "Tolvas graneleras para operación portuaria",

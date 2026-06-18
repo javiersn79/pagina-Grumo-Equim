@@ -89,10 +89,26 @@
       titleTarget.textContent = activeProject.title;
     }
 
+    const galleryHtml = (activeProject.images && activeProject.images.length)
+      ? `<div class="detail-gallery">
+          ${activeProject.images.map((src) => `<img class="detail-gallery-image" src="${src}" alt="${activeProject.title}" loading="lazy">`).join("")}
+        </div>`
+      : "";
+
+    const brochuresHtml = (activeProject.brochures && activeProject.brochures.length)
+      ? `<div class="detail-brochures mt-6">
+          <strong class="detail-brochures-label">Documentación</strong>
+          <div class="detail-brochures-links">
+            ${activeProject.brochures.map((b) => `<a class="btn-secondary btn-sm" href="${b.href}" target="_blank" rel="noopener">↓ ${b.label}</a>`).join("")}
+          </div>
+        </div>`
+      : "";
+
     detailContainer.innerHTML = `
       <div class="detail-layout">
         <div>
           <img class="detail-hero-image" src="${activeProject.photo}" alt="${activeProject.title}">
+          ${galleryHtml}
         </div>
         <article class="detail-card">
           <span class="category-pill">${categoryLabel[activeProject.category] || activeProject.category}</span>
@@ -112,6 +128,7 @@
               <span>${categoryLabel[activeProject.category] || activeProject.category}</span>
             </div>
           </div>
+          ${brochuresHtml}
         </article>
       </div>
     `;
