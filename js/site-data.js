@@ -57,24 +57,14 @@ window.EQUIM_SITE = {
     address: ["Calle 16 N° 10 - 42, Barrio Gaitán.", "Santander, Colombia."],
     email: {
       label: "Correo",
-      value: "hernando.sandoval@equimsas.com",
-      href: "mailto:hernando.sandoval@equimsas.com"
+      value: "info@equimsas.com",
+      href: "mailto:info@equimsas.com"
     },
     channels: [
       {
-        label: "PBX",
-        value: "+57 (7) 671 44 12 / 05",
-        href: "tel:+5776714412"
-      },
-      {
-        label: "Ventas",
-        value: "+57 300 207 12 70",
-        href: "tel:+573002071270"
-      },
-      {
-        label: "Información",
+        label: "WhatsApp",
         value: "+57 304 539 70 24",
-        href: "tel:+573045397024"
+        href: "https://wa.me/573045397024"
       }
     ]
   },
