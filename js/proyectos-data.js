@@ -112,5 +112,19 @@ window.EQUIM_PROJECTS = [
     images: [
       "./assets/equim-projects/torre-prelimpieza-2.png"
     ]
+  },
+  {
+    title: "Transportador de banda para manejo portuario",
+    photo: "./assets/equim-projects/transportador-banda-puerto-1.jpg",
+    summary: "Sistema transportador de banda para movilización continua de graneles en terminal marítima, diseñado para alta disponibilidad, operación estable y mantenimiento eficiente.",
+    location: "Buenaventura, Valle del Cauca",
+    client: "Proyectos portuarios",
+    category: "puertos",
+    featured: false,
+    images: [
+      "./assets/equim-projects/transportador-banda-puerto-2.jpg",
+      "./assets/equim-projects/transportador-banda-puerto-3.jpg",
+      "./assets/equim-projects/transportador-banda-puerto-4.png"
+    ]
   }
 ];
