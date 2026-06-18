@@ -88,6 +88,10 @@ window.EQUIM_PROJECTS = [
     location: "Colombia",
     client: "DIANA, ROA",
     category: "cereales",
-    featured: false
+    featured: false,
+    brochures: [
+      { label: "Brochure Español", href: "./assets/equim-docs/brochure-barredor-silos-es.reducido.pdf" },
+      { label: "Brochure English", href: "./assets/equim-docs/brochure-barredor-silos-en.reducido.pdf" }
+    ]
   }
 ];
