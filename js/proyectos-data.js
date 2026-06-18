@@ -146,6 +146,6 @@ window.EQUIM_PROJECTS = [
     location: "Turbo, Antioquia",
     client: "Puerto Antioquia",
     category: "puertos",
-    featured: true
+    featured: false
   }
 ];
