@@ -1,7 +1,7 @@
 window.EQUIM_SITE = {
   brands: {
     equim: {
-      eyebrow: "EQUIM",
+      eyebrow: "EQUIM-GRUMO",
       summary: "Equipos y montajes para procesos agroindustriales, manejo de graneles y ejecución de proyectos."
     },
     grumo: {
@@ -30,10 +30,10 @@ window.EQUIM_SITE = {
     projectsNextStep: {
       eyebrow: "Siguiente paso",
       title: "Si un caso se parece a tu operación, conversemos.",
-      body: "EQUIM puede revisar necesidades de fabricación, montaje y soluciones para procesos agroindustriales o manejo de graneles.",
+      body: "EQUIM-GRUMO puede revisar necesidades de fabricación, montaje y soluciones para procesos agroindustriales o manejo de graneles.",
       compact: true,
       actions: [
-        { label: "Hablar con EQUIM", href: "contacto.html", kind: "primary" },
+        { label: "Hablar con EQUIM-GRUMO", href: "contacto.html", kind: "primary" },
         { label: "Ver soluciones", href: "soluciones.html", kind: "secondary" }
       ]
     }
@@ -114,7 +114,7 @@ window.EQUIM_SITE = {
   },
   footers: {
     home: {
-      copy: "Base local de reconstrucción corporativa para EQUIM. La navegación comercial queda separada de la información institucional secundaria.",
+      copy: "Base local de reconstrucción corporativa para EQUIM-GRUMO. La navegación comercial queda separada de la información institucional secundaria.",
       columns: [
         {
           title: "Mapa principal",
@@ -191,7 +191,7 @@ window.EQUIM_SITE = {
       ]
     },
     project: {
-      copy: "Ficha individual del proyecto o equipo seleccionado dentro del catálogo de EQUIM.",
+      copy: "Ficha individual del proyecto o equipo seleccionado dentro del catálogo de EQUIM-GRUMO.",
       columns: [
         {
           title: "Mapa principal",
