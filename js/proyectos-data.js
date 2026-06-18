@@ -126,5 +126,17 @@ window.EQUIM_PROJECTS = [
       "./assets/equim-projects/transportador-banda-puerto-3.jpg",
       "./assets/equim-projects/transportador-banda-puerto-4.png"
     ]
+  },
+  {
+    title: "Sistema de manejo de graneles para Aliar",
+    photo: "./assets/equim-projects/aliar-1.png",
+    summary: "Desarrollo e implementación de solución industrial para manejo de graneles, enfocada en continuidad operativa, seguridad del proceso y desempeño confiable en planta.",
+    location: "Colombia",
+    client: "Aliar",
+    category: "cereales",
+    featured: false,
+    images: [
+      "./assets/equim-projects/aliar-2.png"
+    ]
   }
 ];
