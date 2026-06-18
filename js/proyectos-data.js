@@ -93,5 +93,17 @@ window.EQUIM_PROJECTS = [
       { label: "Brochure Español", href: "./assets/equim-docs/brochure-barredor-silos-es.reducido.pdf" },
       { label: "Brochure English", href: "./assets/equim-docs/brochure-barredor-silos-en.reducido.pdf" }
     ]
+  },
+  {
+    title: "Torre de prelimpieza para cereales",
+    photo: "./assets/equim-projects/torre-prelimpieza-1.png",
+    summary: "Sistema de prelimpieza orientado a remover impurezas antes del secado o almacenamiento, mejorando la eficiencia operativa y la calidad del grano en planta.",
+    location: "Colombia",
+    client: "Varios clientes",
+    category: "cereales",
+    featured: false,
+    images: [
+      "./assets/equim-projects/torre-prelimpieza-2.png"
+    ]
   }
 ];
