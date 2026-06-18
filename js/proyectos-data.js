@@ -80,5 +80,14 @@ window.EQUIM_PROJECTS = [
     client: "Compas",
     category: "puertos",
     featured: false
+  },
+  {
+    title: "Barredor de cadena para silos",
+    photo: "./assets/equim-projects/barredor-cadena-silos.jpg",
+    summary: "El barredor de cadena es un equipo diseñado para la extracción eficiente de granos almacenados en silos planos, movilizando el producto mediante paletas que lo conducen hacia los sistemas de descarga, garantizando una evacuación rápida y eficiente del grano sin dañarlo y asegurando un barrido uniforme del silo.",
+    location: "Colombia",
+    client: "DIANA, ROA",
+    category: "cereales",
+    featured: false
   }
 ];
