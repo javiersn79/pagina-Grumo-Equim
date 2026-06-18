@@ -114,7 +114,7 @@ window.EQUIM_SITE = {
   },
   footers: {
     home: {
-      copy: "Base local de reconstrucción corporativa para EQUIM-GRUMO. La navegación comercial queda separada de la información institucional secundaria.",
+      copy: "EQUIM-GRUMO integra diseño, fabricación y montaje para soluciones agroindustriales y portuarias con enfoque técnico y ejecución en campo.",
       columns: [
         {
           title: "Mapa principal",
