@@ -37,13 +37,20 @@ window.EQUIM_PROJECTS = [
     ]
   },
   {
-    title: "Tolvas graneleras para operación portuaria",
-    photo: "./assets/equim-projects/tolva-puerto.jpg",
-    summary: "Tolva para puerto de 30 toneladas orientada al manejo y despacho de granos en terminal marítima.",
-    location: "Puerto Príncipe, Haití",
-    client: "CGC",
+    title: "Tolvas graneleras móviles para operación portuaria",
+    photo: "./assets/equim-projects/tolvas-graneleras-moviles-1.png",
+    summary: "Solución móvil para recepción y transferencia de graneles en muelle, diseñada para optimizar el flujo de cargue-descargue con operación estable y segura.",
+    location: "Buenaventura, Valle del Cauca",
+    client: "Proyectos portuarios",
     category: "puertos",
-    featured: true
+    featured: true,
+    images: [
+      "./assets/equim-projects/tolvas-graneleras-moviles-2.png",
+      "./assets/equim-projects/tolvas-graneleras-moviles-3.png",
+      "./assets/equim-projects/tolvas-graneleras-moviles-4.png",
+      "./assets/equim-projects/tolvas-graneleras-moviles-5.png",
+      "./assets/equim-projects/tolvas-graneleras-moviles-6.png"
+    ]
   },
   {
     title: "Elevador de cangilones para OPP Graneles",
