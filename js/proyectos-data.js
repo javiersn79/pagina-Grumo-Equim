@@ -6,7 +6,7 @@ window.EQUIM_PROJECTS = [
     location: "Pore, Casanare",
     client: "ORF",
     category: "cereales",
-    featured: true
+    featured: false
   },
   {
     title: "Montaje de transportador de cargue de silos",
@@ -15,7 +15,7 @@ window.EQUIM_PROJECTS = [
     location: "Granada, Meta",
     client: "Cliente no divulgado",
     category: "izaje",
-    featured: true
+    featured: false
   },
   {
     title: "Horno ciclónico con secadora de torre",
@@ -120,7 +120,7 @@ window.EQUIM_PROJECTS = [
     location: "Buenaventura, Valle del Cauca",
     client: "Proyectos portuarios",
     category: "puertos",
-    featured: false,
+    featured: true,
     images: [
       "./assets/equim-projects/transportador-banda-puerto-2.jpg",
       "./assets/equim-projects/transportador-banda-puerto-3.jpg",
