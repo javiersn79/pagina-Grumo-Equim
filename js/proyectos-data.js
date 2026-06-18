@@ -138,5 +138,14 @@ window.EQUIM_PROJECTS = [
     images: [
       "./assets/equim-projects/aliar-2.png"
     ]
+  },
+  {
+    title: "Solución de manejo de graneles para Puerto Antioquia",
+    photo: "./assets/equim-projects/puerto-antioquia-proyecto.png",
+    summary: "Proyecto orientado a fortalecer la infraestructura portuaria para recepción y transferencia de graneles, con enfoque en eficiencia logística, operación segura y continuidad del servicio.",
+    location: "Turbo, Antioquia",
+    client: "Puerto Antioquia",
+    category: "puertos",
+    featured: true
   }
 ];
