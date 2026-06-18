@@ -219,8 +219,9 @@
 
       container.innerHTML = `
         <div>
-          <a class="brand-lockup brand-lockup-footer" href="index.html" aria-label="EQUIM y GRUMO">
-            <img class="brand-logo" src="./assets/equim-brand/equim-grumo-footer-dark.png" alt="Marca institucional de EQUIM y GRUMO">
+          <a class="brand-lockup brand-lockup-footer" href="index.html" aria-label="GRUMO y EQUIM">
+            <img class="brand-logo" src="./assets/equim-brand/grumo-logo-nuevo.png" alt="GRUMO">
+            <img class="brand-logo" src="./assets/equim-brand/equim-logo-nuevo.png" alt="EQUIM">
           </a>
           <p class="footer-copy">${variant.copy}</p>
         </div>
