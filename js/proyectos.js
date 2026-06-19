@@ -107,7 +107,7 @@
     detailContainer.innerHTML = `
       <div class="detail-layout">
         <div>
-          <img class="detail-hero-image" src="${activeProject.photo}" alt="${activeProject.title}">
+          <img class="detail-hero-image js-lightbox-trigger" src="${activeProject.photo}" alt="${activeProject.title}" data-lightbox-src="${activeProject.photo}">
           ${galleryHtml}
         </div>
         <article class="detail-card">
@@ -132,6 +132,84 @@
         </article>
       </div>
     `;
+
+    const galleryTriggers = detailContainer.querySelectorAll(".detail-gallery-image");
+    galleryTriggers.forEach((img) => {
+      img.classList.add("js-lightbox-trigger");
+      img.setAttribute("data-lightbox-src", img.getAttribute("src") || "");
+    });
+
+    const lightboxState = {
+      overlay: null,
+      image: null,
+      closeButton: null
+    };
+
+    const closeLightbox = () => {
+      if (!lightboxState.overlay) {
+        return;
+      }
+      lightboxState.overlay.classList.remove("is-open");
+      lightboxState.overlay.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("lightbox-open");
+    };
+
+    const openLightbox = (src, alt) => {
+      if (!src) {
+        return;
+      }
+
+      if (!lightboxState.overlay) {
+        const overlay = document.createElement("div");
+        overlay.className = "lightbox-overlay";
+        overlay.setAttribute("aria-hidden", "true");
+        overlay.innerHTML = `
+          <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Imagen ampliada del proyecto">
+            <button type="button" class="lightbox-close" aria-label="Cerrar imagen">×</button>
+            <img class="lightbox-image" src="" alt="">
+          </div>
+        `;
+        document.body.appendChild(overlay);
+
+        lightboxState.overlay = overlay;
+        lightboxState.image = overlay.querySelector(".lightbox-image");
+        lightboxState.closeButton = overlay.querySelector(".lightbox-close");
+
+        overlay.addEventListener("click", (event) => {
+          if (event.target === overlay) {
+            closeLightbox();
+          }
+        });
+
+        if (lightboxState.closeButton) {
+          lightboxState.closeButton.addEventListener("click", closeLightbox);
+        }
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape" && lightboxState.overlay && lightboxState.overlay.classList.contains("is-open")) {
+            closeLightbox();
+          }
+        });
+      }
+
+      if (lightboxState.image) {
+        lightboxState.image.src = src;
+        lightboxState.image.alt = alt || "Imagen ampliada";
+      }
+
+      if (lightboxState.overlay) {
+        lightboxState.overlay.classList.add("is-open");
+        lightboxState.overlay.setAttribute("aria-hidden", "false");
+      }
+
+      document.body.classList.add("lightbox-open");
+    };
+
+    detailContainer.querySelectorAll(".js-lightbox-trigger").forEach((image) => {
+      image.addEventListener("click", () => {
+        openLightbox(image.getAttribute("data-lightbox-src"), image.getAttribute("alt"));
+      });
+    });
 
     const relatedContainer = document.querySelector("[data-project-related]");
     if (relatedContainer) {
