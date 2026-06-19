@@ -283,7 +283,7 @@ body::before {
 }
 
 .eyebrow {
-    color: var(--equim-accent);
+    color: var(--equim-accent-dark);
     font-size: 0.8rem;
     font-weight: 800;
     letter-spacing: 0.09em;
@@ -497,6 +497,17 @@ body::before {
     color: var(--equim-ink);
 }
 
+.story-panel h3,
+.story-panel .h3 {
+    color: var(--equim-ink);
+}
+
+.surface-card h2,
+.surface-card .h2,
+.surface-card h3,
+.surface-card .h3,
+.story-panel h2,
+.story-panel .h2,
 .story-panel h3,
 .story-panel .h3 {
     color: var(--equim-ink);
