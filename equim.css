@@ -437,6 +437,11 @@ body::before {
     color: #ffe39b;
 }
 
+.section-dark .story-panel .eyebrow,
+.section-dark .surface-card .eyebrow {
+    color: var(--equim-accent-dark);
+}
+
 .split-heading {
     display: flex;
     flex-wrap: wrap;
