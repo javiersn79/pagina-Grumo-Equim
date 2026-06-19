@@ -20,6 +20,21 @@ body {
     color: var(--equim-ink);
 }
 
+.about-page .page-intro,
+.about-page .section-heading p,
+.about-page .surface-card p,
+.about-page .stats-strip span {
+    color: #4f5c4a;
+}
+
+.about-page .stats-strip strong,
+.about-page .surface-card h2,
+.about-page .surface-card .h2,
+.about-page .surface-card h3,
+.about-page .surface-card .h3 {
+    color: #3f4f3b;
+}
+
 body::before {
     content: "";
     position: fixed;
