@@ -494,6 +494,16 @@ body::before {
 
 .story-panel {
     min-height: 100%;
+    color: var(--equim-ink);
+}
+
+.story-panel h3,
+.story-panel .h3 {
+    color: var(--equim-ink);
+}
+
+.story-panel p {
+    color: var(--equim-muted);
 }
 
 .story-panel-accent,
