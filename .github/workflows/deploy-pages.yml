@@ -32,7 +32,11 @@ jobs:
         run: |
           mkdir -p _site
           cp index.html 404.html contacto.html nosotros.html proyecto.html proyectos.html reorganizacion.html soluciones.html style.css equim.css .nojekyll _site/
-          cp -R assets css images js videos _site/
+          for dir in assets css js images videos; do
+            if [ -d "$dir" ]; then
+              cp -R "$dir" _site/
+            fi
+          done
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
