@@ -1,7 +1,0 @@
-<svg width="760" height="170" viewBox="0 0 760 170" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="760" height="170" rx="16" fill="white"/>
-  <path d="M26 126L72 42L122 42L74 126H26Z" fill="#F2B705"/>
-  <path d="M26 126L62 74L78 126H26Z" fill="#3B3B3B"/>
-  <text x="138" y="101" fill="#3B3B3B" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="74" font-style="italic">Factor&amp;</text>
-  <text x="430" y="101" fill="#F2B705" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="74" font-style="italic">Valor</text>
-</svg>
