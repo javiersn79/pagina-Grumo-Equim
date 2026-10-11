@@ -37,10 +37,10 @@ window.EQUIM_PROJECTS = [
     ]
   },
   {
-    title: "Tolvas graneleras móviles para operación portuaria",
+    title: "Tolvas graneleras móviles",
     photo: "./assets/equim-projects/tolvas-graneleras-moviles-1.png",
-    summary: "Solución móvil para recepción y transferencia de graneles en muelle, diseñada para optimizar el flujo de cargue-descargue con operación estable y segura.",
-    location: "Buenaventura, Valle del Cauca",
+    summary: "Recepción, almacenamiento temporal y descarga controlada de granos y fertilizantes, con capacidades de 40 m³ a 60 m³.",
+    location: "Tolú, Sucre",
     client: "Proyectos portuarios",
     category: "puertos",
     featured: true,

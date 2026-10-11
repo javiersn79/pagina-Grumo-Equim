@@ -73,22 +73,22 @@ window.EQUIM_SITE = {
       {
         title: "Auto de admisión al proceso de reorganización",
         summary: "Superintendencia de Sociedades, mayo de 2021.",
-        href: "https://equimsas.com/wp-content/uploads/2021/05/Auto-Admision-Reorganizacion-Equim-SAS.pdf"
+        href: "./assets/equim-docs/institucional/auto-admision-reorganizacion-equim.pdf"
       },
       {
         title: "Aviso de admisión",
         summary: "Documento público con datos de referencia del proceso.",
-        href: "https://equimsas.com/wp-content/uploads/2021/05/Aviso-Admision-Reorganizacion-Equim-SAS.pdf"
+        href: "./assets/equim-docs/institucional/aviso-admision-reorganizacion-equim.pdf"
       },
       {
         title: "Texto del acuerdo de reorganización",
         summary: "Documento radicado en febrero de 2022.",
-        href: "https://equimsas.com/wp-content/uploads/2022/05/Rad.-2022-01-090001-de-23022022-Texto-de-Acuerdo-de-Reorganizacio%CC%81n-Resultado-de-Audiencia-de-Confirmacio%CC%81n-del-Acuerdo-Equim-Equipo-y-Montajes-S.A.S-2.pdf"
+        href: "./assets/equim-docs/institucional/acuerdo-reorganizacion-equim-2022.pdf"
       },
       {
         title: "Actualización de inventario de activos y pasivos",
         summary: "Documento remitido desde el área contable.",
-        href: "https://equimsas.com/wp-content/uploads/2021/05/Actualizacion-Inventario-de-Activos-y-Pasivos-Equim-SAS.pdf"
+        href: "./assets/equim-docs/institucional/actualizacion-inventario-activos-pasivos-equim.pdf"
       }
     ],
     contact: {
@@ -118,8 +118,7 @@ window.EQUIM_SITE = {
         {
           title: "Institucional",
           links: [
-            { label: "Reorganización", href: "reorganizacion.html" },
-            { label: "Sitio original", href: "https://equimsas.com/", external: true }
+            { label: "Reorganización", href: "reorganizacion.html" }
           ]
         }
       ]
