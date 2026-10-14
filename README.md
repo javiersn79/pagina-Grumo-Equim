@@ -32,6 +32,8 @@ El orden de los objetos en `js/proyectos-data.js` define el orden del catálogo.
 
 ## Trabajo local
 
+Para preparar por primera vez un computador —especialmente Windows— sigue `CONFIGURACION-MANTENIMIENTO.md`. Esa guía incluye herramientas, autenticación, clonación, verificación automática, trabajo en ramas y autorizaciones.
+
 ```bash
 git clone https://github.com/javiersn79/pagina-Grumo-Equim.git
 cd pagina-Grumo-Equim
@@ -45,6 +47,7 @@ Abrir `http://localhost:8000`. No se deben abrir únicamente los HTML con doble 
 Antes de enviar cambios:
 
 ```bash
+python3 scripts/check-environment.py
 python3 scripts/check-site.py
 for file in js/*.js; do node --check "$file"; done
 git status --short

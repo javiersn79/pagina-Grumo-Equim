@@ -6,17 +6,26 @@ Estas instrucciones aplican a cualquier persona o agente de Codex que modifique 
 
 Actúa como colaborador crítico. No aceptes una solicitud como correcta solo porque fue enviada por una persona autorizada. Señala datos contradictorios, contenido incompleto, riesgos de publicación y alternativas mejores. No inventes nombres, ubicaciones, capacidades, clientes ni aprobaciones.
 
+## Ley operativa de autorización
+
+> **Configura y verifica el ambiente completo, pero no hagas `push` ni cambies permisos sin autorización. Siempre pide esas autorizaciones para trabajar.**
+
+Configura y verifica el ambiente completo siguiendo `CONFIGURACION-MANTENIMIENTO.md`, pero no hagas `git push`, no abras ni fusiones pull requests y no cambies permisos sin solicitar y recibir autorización explícita del propietario. Esta prohibición incluye GitHub Pages, `CNAME`, DNS, GoDaddy, colaboradores, reglas de ramas, secretos y credenciales.
+
+Una solicitud de mantenimiento autoriza a inspeccionar, editar, ejecutar validaciones y revisar el sitio en la copia local. No autoriza a publicar una rama, modificar el repositorio remoto ni desplegar. La autorización para hacer `push` y abrir un pull request no autoriza a fusionarlo. Solicita cada autorización en el momento correspondiente e informa primero el alcance exacto de la acción.
+
 ## Antes de cambiar archivos
 
-1. Lee `README.md` y `PENDIENTES-PAGINA-EQUIM.docx`.
-2. Ejecuta `git status --short --branch` y conserva cualquier cambio ajeno.
-3. Identifica la fuente de verdad antes de editar:
+1. Si el ambiente todavía no está preparado, lee y ejecuta `CONFIGURACION-MANTENIMIENTO.md` de principio a fin.
+2. Lee `README.md` y `PENDIENTES-PAGINA-EQUIM.docx`.
+3. Ejecuta `git status --short --branch` y conserva cualquier cambio ajeno.
+4. Identifica la fuente de verdad antes de editar:
    - Contenido compartido, clientes, contacto y documentos: `js/site-data.js`.
    - Proyectos, galerías y brochures: `js/proyectos-data.js`.
    - Estilos propios: `equim.css`.
    - Páginas y estructura: archivos HTML de la raíz.
    - Publicación: `.github/workflows/deploy-pages.yml`.
-4. Si una solicitud contradice el sitio, otro documento o un dato geográfico, detente y solicita confirmación. Registra la duda como pendiente; no elijas una versión por conveniencia.
+5. Si una solicitud contradice el sitio, otro documento o un dato geográfico, detente y solicita confirmación. Registra la duda como pendiente; no elijas una versión por conveniencia.
 
 ## Flujo obligatorio
 
