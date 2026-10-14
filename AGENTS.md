@@ -39,6 +39,55 @@ Actúa como colaborador crítico. No aceptes una solicitud como correcta solo po
 8. El despliegue ocurre solamente después de integrar el pull request en `main`. Después de la integración, verifica `Deploy GitHub Pages` y el sitio público.
 9. Cada colaborador debe usar su propia cuenta y credenciales. No solicites ni compartas contraseñas, tokens, códigos de recuperación o sesiones del propietario.
 
+### Guía paso a paso para una persona nueva en Git
+
+La copia que se modifica en el computador se llama **copia local**. La copia privada alojada en GitHub se llama **repositorio remoto**. Ver el sitio en `localhost` no publica nada en Internet. El sitio público solo cambia después de que el propietario aprueba e integra un pull request en `main`.
+
+Para mantenimiento continuo, clona el repositorio con Git; no uses la opción de descargar un ZIP, porque el ZIP no conserva ramas ni historial:
+
+```bash
+git clone https://github.com/javiersn79/pagina-Grumo-Equim.git
+cd pagina-Grumo-Equim
+```
+
+Antes de comenzar cada cambio, actualiza `main` y crea una rama local nueva. Sustituye `descripcion-corta` por un nombre relacionado con el requerimiento, sin espacios:
+
+```bash
+git switch main
+git pull --ff-only origin main
+git switch -c mantenimiento/descripcion-corta
+```
+
+Realiza todos los cambios en esa rama. Puedes experimentar y ajustar el sitio localmente sin afectar GitHub ni la página pública. Para verlo en el navegador:
+
+```bash
+python3 -m http.server 8000
+```
+
+Abre `http://localhost:8000`, revisa el resultado y detén el servidor con `Ctrl+C`. Antes de preparar el cambio para revisión, ejecuta las validaciones de este documento y examina exactamente qué archivos cambiaron:
+
+```bash
+git status --short
+git diff
+```
+
+Incluye en la rama solamente los cambios que deban proponerse al propietario. No incluyas pruebas personales, archivos temporales ni ajustes que no formen parte del requerimiento. Cuando el resultado local esté aprobado y validado, crea un commit local con los archivos correspondientes:
+
+```bash
+git add ruta/del/archivo
+git commit -m "Describe el resultado del cambio"
+```
+
+En este punto todavía no se ha publicado nada. Detente y solicita al propietario autorización para subir la rama y crear el pull request. Solo después de recibir esa autorización ejecuta:
+
+```bash
+git push -u origin mantenimiento/descripcion-corta
+```
+
+Después del `push`, abre GitHub y crea un pull request desde `mantenimiento/descripcion-corta` hacia `main`. El pull request es la solicitud para que el propietario revise el cambio; no es todavía el despliegue. La persona mantenedora debe esperar los comentarios o la aprobación y no debe pulsar **Merge**.
+
+Cuando el propietario aprueba y fusiona el pull request en `main`, GitHub Actions ejecuta `Deploy GitHub Pages`. Solo en ese momento el cambio pasa al sitio público. Si el despliegue falla, no hagas cambios de DNS, `CNAME`, GitHub Pages o permisos: informa al propietario con el mensaje del error.
+
 ## Cambios de contenido
 
 - Exige texto completo, página, sección, motivo y prioridad.
