@@ -1,5 +1,4 @@
 /*! tailwindcss v4.1.2 | MIT License | https://tailwindcss.com */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,400&display=fallback') layer(base);
 @layer properties;
 @layer theme, base, components, utilities;
 @layer theme {

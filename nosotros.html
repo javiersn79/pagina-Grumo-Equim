@@ -23,7 +23,8 @@
     <link rel="shortcut icon" href="./assets/equim-brand/equim-favicon.svg">
     <link href="./css/vendors/aos.css" rel="stylesheet">
     <link href="./style.css" rel="stylesheet">
-    <link href="./equim.css" rel="stylesheet">
+    <link href="./equim.css?v=20261022-layout-final" rel="stylesheet">
+    <link href="./site-layout.css?v=20261023-equipo-jerson" rel="stylesheet">
 </head>
 <body class="font-inter antialiased text-slate-900 tracking-tight about-page">
     <div class="site-shell">
@@ -35,6 +36,9 @@
                         <img class="brand-logo" src="./assets/equim-brand/equim-logo-nuevo.png" alt="EQUIM-GRUMO">
                     </a>
                     <nav class="hidden md:flex md:items-center md:gap-2" aria-label="Navegación principal" data-site-nav="about"></nav>
+                    <div class="hidden md:block header-contact">
+                        <a class="btn-primary" href="contacto.html">Hablar con EQUIM-GRUMO</a>
+                    </div>
                     <div class="flex md:hidden" x-data="{ expanded: false }">
                         <button class="mobile-toggle" aria-controls="mobile-nav" :aria-expanded="expanded" @click.stop="expanded = !expanded">
                             <span class="sr-only">Abrir menú</span>
@@ -65,13 +69,14 @@
         </header>
 
         <main>
-            <section class="page-hero">
+            <section class="page-hero projects-photo-hero interior-home-preview about-photo-hero">
                 <div class="max-w-6xl mx-auto px-4 sm:px-6">
                     <span class="eyebrow">Nosotros</span>
-                    <h1 class="page-title font-playfair-display">Más de cinco décadas de experiencia aplicadas al desarrollo de soluciones industriales.</h1>
+                    <h1 class="page-title font-playfair-display">Más de seis décadas de experiencia aplicadas al desarrollo de <span>soluciones industriales.</span></h1>
                     <p class="page-intro">
-                        EQUIM-GRUMO es un grupo empresarial colombiano especializado en diseño, fabricación y montaje de equipos para proyectos agroindustriales, soluciones portuarias y servicios de izaje.
+                        Somos un grupo empresarial colombiano del sector metalmecánico, especializado en el diseño, fabricación y montaje de equipos para la agroindustria y las operaciones portuarias. Complementamos nuestra experiencia con servicios de izaje y movilización de carga y equipos para proyectos industriales.
                     </p>
+                    <div class="hero-actions"><a class="btn-primary" href="#nuestro-equipo">Conocer nuestro equipo →</a></div>
                 </div>
             </section>
 
@@ -80,19 +85,19 @@
                     <div class="two-column-story">
                         <div class="surface-card">
                             <span class="eyebrow">Historia</span>
-                            <h2 class="h3 font-playfair-display">Trayectoria al servicio de la agroindustria.</h2>
+                            <h2 class="h3 font-playfair-display">Trayectoria al servicio de la agroindustria</h2>
                             <p>
-                                EQUIM-GRUMO concentra su experiencia en el desarrollo de equipos para recibo, elevación, transporte, pre-limpieza, limpieza, secamiento, almacenamiento y molinería de arroz, así como soluciones para el manejo, despacho y almacenamiento de granos en puertos marítimos.
+                                EQUIM-GRUMO desarrolla y fabrica equipos para las distintas etapas del procesamiento del arroz, para recibo, elevación, transporte, pre-limpieza, limpieza, el secamiento, el almacenamiento y la molinería. En el sector portuario, participa en proyectos de manejo, despacho y almacenamiento de granos en puertos marítimos.
                             </p>
                             <p>
-                                La empresa ha trabajado durante más de 60 años en la producción y montaje de soluciones para el sector, manteniendo una combinación valiosa entre ingeniería, fabricación y ejecución en campo.
+                                Con más de 60 años de trayectoria, integra ingeniería, fabricación, montaje y ejecución en campo para responder a las exigencias de la agroindustria y las operaciones portuarias.
                             </p>
                         </div>
                         <div class="surface-card surface-card-accent">
                             <span class="eyebrow">Mejora continua</span>
                             <h2 class="h3 font-playfair-display">Capacidad técnica con visión de largo plazo.</h2>
                             <p>
-                                Trabajamos en mejora continua para contribuir al crecimiento y fortalecimiento de la agroindustria a nivel nacional e internacional, con un enfoque orientado a la confiabilidad y al desempeño del proceso.
+                                Impulsamos la evolución de nuestras capacidades técnicas para fortalecer la agroindustria en Colombia y otros mercados, promoviendo la confiabilidad de los equipos, la eficiencia operativa y el desempeño de los procesos industriales.
                             </p>
                         </div>
                     </div>
@@ -122,7 +127,7 @@
                 <div class="max-w-6xl mx-auto px-4 sm:px-6">
                     <div class="section-heading">
                         <span class="eyebrow">Enfoque</span>
-                        <h2 class="h2 font-playfair-display">La empresa se entiende mejor cuando se presenta por capacidades y sectores.</h2>
+                        <h2 class="h2 font-playfair-display">Soluciones de ingeniería para diferentes industrias</h2>
                     </div>
                     <div class="capability-grid">
                         <article class="surface-card">
@@ -144,30 +149,42 @@
                 </div>
             </section>
 
-            <section class="section-shell">
+            <section id="nuestro-equipo" class="section-shell team-highlight">
                 <div class="max-w-6xl mx-auto px-4 sm:px-6">
                     <div class="section-heading">
-                        <span class="eyebrow">Equipo visible</span>
-                        <h2 class="h2 font-playfair-display">Dirección, coordinación y soporte técnico de proyectos.</h2>
+                        <span class="eyebrow">Nuestro equipo</span>
+                        <h2 class="h2 font-playfair-display">Liderazgo, experiencia e ingeniería al servicio de cada proyecto</h2>
                     </div>
-                    <div class="team-grid">
+                    <div class="team-grid team-grid-five">
                         <article class="surface-card">
-                            <img class="team-portrait" src="./assets/equim-team/hernando-sandoval.png" alt="Hernando Sandoval">
+                            <img class="team-portrait" src="./assets/equim-team/hernando-sandoval-retrato-actualizado.png" alt="Hernando Sandoval">
                             <strong class="team-role">Gerencia general</strong>
                             <h3 class="h4 font-playfair-display">Hernando Sandoval</h3>
-                            <p>Socio fundador y gerente general de EQUIM-GRUMO, con trayectoria asociada al crecimiento de la empresa en el sector.</p>
+                            <p>Socio fundador y gerente general de EQUIM-GRUMO, lidera la dirección estratégica y el crecimiento de la empresa en el sector industrial.</p>
                         </article>
                         <article class="surface-card">
-                            <img class="team-portrait" src="./assets/equim-team/javier-osma.png" alt="Javier Osma">
+                            <img class="team-portrait" src="./assets/equim-team/javier-osma-uniforme.png" alt="Javier Osma">
                             <strong class="team-role">Proyectos y logística</strong>
                             <h3 class="h4 font-playfair-display">Javier Osma</h3>
-                            <p>Director de proyectos y logística, con un rol central en la coordinación operativa y la ejecución de montajes.</p>
+                            <p>Dirige la coordinación de proyectos y logística, articulando la operación y la ejecución de montajes industriales.</p>
                         </article>
                         <article class="surface-card">
-                            <img class="team-portrait" src="./assets/equim-team/luis-garcia.png" alt="Luis Garcia">
+                            <img class="team-portrait" src="./assets/equim-team/manuel-lozada-brazos-cruzados.png" alt="Manuel Lozada">
                             <strong class="team-role">Diseño e ingeniería</strong>
-                            <h3 class="h4 font-playfair-display">Luis Garcia</h3>
-                            <p>Apoyo visible en diseño e ingeniería para el desarrollo y ajuste técnico de soluciones dentro de los proyectos de EQUIM-GRUMO.</p>
+                            <h3 class="h4 font-playfair-display">Manuel Lozada</h3>
+                            <p>Lidera el área de diseño e ingeniería, coordinando la operación de planta y el desarrollo técnico de los proyectos de EQUIM-GRUMO.</p>
+                        </article>
+                        <article class="surface-card">
+                            <img class="team-portrait" src="./assets/equim-team/diana-ramirez.png" alt="Diana Ramírez">
+                            <strong class="team-role">Diseño y Abastecimiento</strong>
+                            <h3 class="h4 font-playfair-display">Diana Ramírez</h3>
+                            <p>Lidera la gestión de compras y abastecimiento, así como el diseño y desarrollo de material gráfico, publicitario y documentación técnica de EQUIM-GRUMO.</p>
+                        </article>
+                        <article class="surface-card">
+                            <img class="team-portrait" src="./assets/equim-team/jerson-diaz.png" alt="Jerson Diaz">
+                            <strong class="team-role">Gestor administrativo contable y financiero</strong>
+                            <h3 class="h4 font-playfair-display">Jerson Diaz</h3>
+                            <p>Lidera la gestión administrativa, contable y financiera, asegurando el adecuado manejo de los recursos y procesos de EQUIM-GRUMO.</p>
                         </article>
                     </div>
                 </div>

@@ -23,7 +23,8 @@
     <link rel="shortcut icon" href="./assets/equim-brand/equim-favicon.svg">
     <link href="./css/vendors/aos.css" rel="stylesheet">
     <link href="./style.css" rel="stylesheet">
-    <link href="./equim.css" rel="stylesheet">
+    <link href="./equim.css?v=20261023-galeria" rel="stylesheet">
+    <link href="./site-layout.css?v=20261023-fichas-solo-cuadricula" rel="stylesheet">
 </head>
 <body class="font-inter antialiased text-slate-900 tracking-tight">
     <div class="site-shell">
@@ -35,6 +36,9 @@
                         <img class="brand-logo" src="./assets/equim-brand/equim-logo-nuevo.png" alt="EQUIM-GRUMO">
                     </a>
                     <nav class="hidden md:flex md:items-center md:gap-2" aria-label="Navegación principal" data-site-nav="projects"></nav>
+                    <div class="hidden md:block header-contact">
+                        <a class="btn-primary" href="contacto.html">Hablar con EQUIM-GRUMO</a>
+                    </div>
                     <div class="flex md:hidden" x-data="{ expanded: false }">
                         <button class="mobile-toggle" aria-controls="mobile-nav" :aria-expanded="expanded" @click.stop="expanded = !expanded">
                             <span class="sr-only">Abrir menú</span>
@@ -105,7 +109,7 @@
     <script src="./js/site-data.js"></script>
     <script src="./js/site-render.js"></script>
     <script src="./js/main.js"></script>
-    <script src="./js/proyectos-data.js"></script>
-    <script src="./js/proyectos.js"></script>
+    <script src="./js/proyectos-data.js?v=20261023-mar-verde-azulado"></script>
+    <script src="./js/proyectos.js?v=20261023-fichas-solo-cuadricula"></script>
 </body>
 </html>

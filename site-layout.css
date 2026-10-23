@@ -1,0 +1,502 @@
+/* Escala compartida por todas las páginas. Inicio es la referencia. */
+:root {
+    --site-title-size: 48px;
+    --site-section-size: 34px;
+    --site-subtitle-size: 23px;
+    --site-body-size: 16px;
+    --site-control-size: 15px;
+    --site-content-width: 72rem;
+}
+body { font-size: var(--site-body-size); }
+body .max-w-6xl,
+body .solutions-lines-section > .max-w-6xl,
+body .site-footer .max-w-6xl { max-width: var(--site-content-width); width: 100%; }
+body h1, body .hero-title, body .page-title,
+body .home-page .hero-title, .home-page .hero-title,
+body .projects-photo-hero .page-title,
+body .interior-home-preview .page-title,
+body .corporate-flow-hero .page-title {
+    font-family: Manrope, Arial, sans-serif;
+    font-size: var(--site-title-size);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -.025em;
+    max-width: 43rem;
+}
+body h2, body .h2, body .section-heading .h2,
+body .solution-detail > div:first-child .h2 {
+    font-size: var(--site-section-size);
+    font-weight: 700;
+    line-height: 1.2;
+}
+body h3, body h4, body .h3, body .h4,
+body .hero-panel h2, body .project-card h3, body .project-card .h4 {
+    font-size: var(--site-subtitle-size);
+    font-weight: 700;
+    line-height: 1.3;
+}
+body p, body .page-intro, body .hero-copy,
+body .hero-panel p, body .surface-card p, body .solution-card p,
+body .section-heading p, body .story-panel p, body .footer-copy,
+body .clean-list, body .stats-strip span {
+    font-family: Inter, Arial, sans-serif;
+    font-size: var(--site-body-size);
+    font-weight: 400;
+    line-height: 1.7;
+}
+body .page-hero .page-intro, body .hero-section .hero-copy { max-width: 38rem; }
+body .nav-link, body .mobile-nav-link,
+body .btn-primary, body .btn-secondary, body .filter-chip,
+.home-page .site-header .btn-primary { font-size: var(--site-control-size); line-height: 1.45; }
+body .eyebrow,
+body .solutions-lines-section .solution-detail > div:first-child .eyebrow { font-size: 13px; letter-spacing: .09em; }
+@media (max-width: 767px) {
+    :root {
+        --site-title-size: clamp(29px, 7vw, 38px);
+        --site-section-size: 27px;
+        --site-subtitle-size: 21px;
+    }
+}
+
+/* Geometría idéntica de encabezado, contenedores y portadas. */
+html { scrollbar-gutter: stable; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body .max-w-6xl {
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.site-header .brand-logo { max-width: 9rem; max-height: 2.5rem; }
+.site-header .nav-link { padding: .65rem .7rem; }
+.site-header .header-contact .btn-primary { padding: .65rem .8rem; }
+body .page-hero .page-title, body .home-page .hero-title, .home-page .hero-title {
+    margin-top: 1rem;
+    margin-bottom: 1.25rem;
+}
+body .page-hero, body .hero-section { padding-top: 5rem; }
+body .page-hero .hero-actions, body .hero-section .hero-actions { margin-top: 1.75rem; }
+/* Interiores de Soluciones: conservar la escala sin estrechar el cuerpo. */
+@media (min-width: 768px) {
+    body .max-w-6xl { padding-left: 24px; padding-right: 24px; }
+}
+@media (min-width: 768px) and (max-width: 1100px) {
+    .site-header .brand-logo { max-width: 7rem; }
+    .site-header .header-contact { display: none; }
+}
+@media (max-width: 767px) {
+    body .page-hero, body .hero-section { padding-top: 2.5rem; }
+    .site-header .brand-logo { max-width: 34vw; max-height: 2.2rem; }
+}
+
+/* Espacio suficiente para los títulos sin modificar las fotografías. */
+.solutions-lines-section .solution-detail > div:first-child {
+    min-width: 0;
+    overflow: visible;
+}
+body .solutions-lines-section .solution-detail > div:first-child .h2 {
+    overflow-wrap: anywhere;
+}
+@media (min-width: 768px) {
+    .solutions-lines-section .solution-detail {
+        grid-template-columns: minmax(0, .72fr) minmax(0, 1.28fr);
+        column-gap: 2rem;
+    }
+    .solutions-lines-section .solution-detail > div:first-child {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+}
+
+/* Alinear el texto con el encuadre y reducir espacios internos excesivos. */
+.solutions-lines-section .solution-copy-panel {
+    align-self: stretch;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 0;
+}
+body .solutions-lines-section .solution-copy-panel p,
+body .solutions-lines-section .solution-copy-panel .clean-list {
+    font-size: var(--site-body-size);
+    line-height: 1.5;
+}
+.solutions-lines-section .solution-copy-panel p { margin: 0; }
+.solutions-lines-section .solution-copy-panel .clean-list {
+    margin-top: 1rem;
+    gap: 0;
+}
+.solutions-lines-section .solution-copy-panel .clean-list li { padding: .6rem 0; }
+@media (min-width: 900px) {
+    .solutions-lines-section .solution-detail > .surface-card {
+        grid-template-columns: minmax(0, 1.15fr) minmax(0, 1.15fr);
+        align-content: start;
+        align-items: stretch;
+    }
+}
+@media (max-width: 899px) {
+    .solutions-lines-section .solution-copy-panel { padding: 1.5rem; }
+}
+
+/* Separación continua entre fotografía y texto, sin franja vacía inferior. */
+@media (min-width: 900px) {
+    .solutions-lines-section .solution-detail > .surface-card { align-items: stretch; }
+    .solutions-lines-section .solution-photo-frame {
+        align-self: stretch;
+        height: 100%;
+        min-height: 26rem;
+        background: #5D6E50;
+    }
+    .solutions-lines-section .solution-photo-window,
+    #cereales .solution-photo-window,
+    #puertos .solution-photo-window {
+        position: relative;
+        height: 100%;
+        min-height: 26rem;
+        aspect-ratio: auto;
+    }
+    .solutions-lines-section .solution-photo-window .solution-inline-image {
+        position: absolute;
+        inset: 0;
+        height: 100%;
+        min-height: 0;
+        object-fit: cover;
+    }
+    #cereales .solution-photo-window .solution-inline-image,
+    #puertos .solution-photo-window .solution-inline-image {
+        object-fit: cover;
+    }
+    .solutions-lines-section .solution-photo-frame::before { top: 0; bottom: 0; }
+    .solutions-lines-section .solution-photo-frame::after {
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        clip-path: polygon(100% 0, 100% 16%, 88% 100%, 84% 100%, 98% 0);
+    }
+}
+
+/* Borde diagonal del panel de texto y acento amarillo interior. */
+@media (min-width: 900px) {
+    .solutions-lines-section .solution-detail > .surface-card { background: transparent; }
+    .solutions-lines-section .solution-detail > .surface-card::before {
+        left: calc(50% - 1.25rem);
+        clip-path: polygon(2.5rem 0, 100% 0, 100% 100%, 0 100%);
+    }
+    .solutions-lines-section .solution-photo-frame::after { display: none; }
+    .solutions-lines-section .solution-copy-panel {
+        position: relative;
+        isolation: isolate;
+        padding-left: 2rem;
+        background: transparent;
+    }
+    .solutions-lines-section .solution-copy-panel::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -1.1rem;
+        width: 2.5rem;
+        background: #FEBB00;
+        clip-path: polygon(82% 0, 100% 0, 18% 100%, 0 100%);
+        pointer-events: none;
+        z-index: -1;
+    }
+}
+
+/* Acento amarillo interior solo en la mitad inferior de la diagonal. */
+@media (min-width: 900px) {
+    .solutions-lines-section .solution-copy-panel::before {
+        top: 50%;
+        bottom: 0;
+        left: -.85rem;
+        width: 1.25rem;
+        clip-path: polygon(82% 0, 100% 0, 18% 100%, 0 100%);
+    }
+}
+
+/* Diagonales coordinadas: mismo recorrido y separación constante. */
+@media (min-width: 900px) {
+    .solutions-lines-section .solution-photo-window {
+        clip-path: polygon(0 0, calc(100% - 1rem) 0, calc(100% - 4rem) 100%, 0 100%);
+    }
+    .solutions-lines-section .solution-photo-frame::before {
+        inset: 0;
+        width: 100%;
+        background: #5D6E50;
+        clip-path: polygon(calc(100% - 1rem) 0, 100% 0, calc(100% - 3rem) 100%, calc(100% - 4rem) 100%);
+    }
+    .solutions-lines-section .solution-detail > .surface-card::before {
+        inset: 0 -50vw 0 calc(50% - 3rem);
+        background: #f3f5f0;
+        clip-path: polygon(3rem 0, 100% 0, 100% 100%, 0 100%);
+    }
+    .solutions-lines-section .solution-copy-panel::before {
+        top: 50%;
+        bottom: 0;
+        left: -2.5rem;
+        width: 2rem;
+        background: #FEBB00;
+        clip-path: polygon(75% 0, 100% 0, 25% 100%, 0 100%);
+    }
+}
+
+/* Dejar visible la diagonal blanca detrás del encuadre fotográfico. */
+@media (min-width: 900px) {
+    .solutions-lines-section .solution-photo-frame { background: transparent; }
+    .solutions-lines-section .solution-photo-window { background: transparent; }
+}
+
+/* Textos de los recuadros claros en el mismo verde de Historia. */
+:root { --equim-ink: #5D6E50; --equim-muted: #5D6E50; }
+body { color: #5D6E50; }
+body :is(.surface-card, .project-card, .detail-card, .story-panel, .document-item, .cta-band, .client-plaque, .solution-copy-panel) {
+    color: #5D6E50;
+}
+body :is(.surface-card, .project-card, .detail-card, .story-panel, .document-item, .cta-band, .client-plaque, .solution-copy-panel) :is(h2, h3, h4, p, li, strong, .clean-list, .detail-meta, .project-card-meta, .cta-band-points a) {
+    color: #5D6E50;
+}
+body .site-footer, body .site-footer .footer-copy, body .site-footer .footer-list { color: #5D6E50; }
+/* Los paneles oscuros mantienen su contraste aprobado. */
+body .home-solutions-highlight .solution-card,
+body .home-solutions-highlight .solution-card h3,
+body .home-solutions-highlight .solution-card p,
+body .hero-section .hero-panel,
+body .hero-section .hero-panel h2,
+body .hero-section .hero-panel p { color: #FFFFFF; }
+
+/* Catálogo visual: imagen protagonista y acceso destacado al proyecto. */
+.project-grid { gap: 1.5rem; align-items: stretch; }
+.project-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid rgba(93,110,80,.25);
+    border-top: 4px solid #5D6E50;
+    box-shadow: 0 10px 26px rgba(29,29,27,.08);
+    transition: transform 180ms ease, box-shadow 180ms ease;
+}
+.project-card .project-card-image {
+    aspect-ratio: 5 / 4;
+    width: 100%;
+    object-fit: cover;
+    border-bottom: 4px solid #FEBB00;
+}
+.project-card .project-card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 1rem;
+    padding: 1.5rem;
+}
+.project-card .category-pill { background: #5D6E50; color: #FFFFFF; }
+.project-card .project-card-title { margin: 0; }
+.project-card .project-card-meta {
+    padding-top: .9rem;
+    padding-bottom: .25rem;
+    border-top: 1px solid rgba(93,110,80,.22);
+    gap: .5rem;
+}
+.project-card .project-card-body > a {
+    margin-top: auto;
+    align-self: flex-start;
+    padding: .75rem 1.1rem;
+    border-radius: 3px;
+    background: #FEBB00;
+    color: #1D1D1B;
+    font: 600 15px/1.45 Inter, Arial, sans-serif;
+    text-decoration: none;
+}
+.project-card .project-card-body > a::after { content: " →"; margin-left: .5rem; }
+.project-card .project-card-body > a:hover { background: #5D6E50; color: #FFFFFF; }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    .project-card:hover { transform: translateY(-4px); box-shadow: 0 16px 32px rgba(29,29,27,.15); }
+}
+@media (max-width: 767px) {
+    .project-card .project-card-body { padding: 1.25rem; }
+}
+
+/* Proyectos: composición editorial basada en la referencia aprobada. */
+body.projects-page .projects-photo-hero {
+    min-height: 25rem;
+    padding: 3.5rem 0 4.5rem;
+    background-image: linear-gradient(90deg, rgba(29,29,27,.91), rgba(29,29,27,.62) 48%, rgba(29,29,27,.08)), url('./assets/equim-hero/proyectos-planta-industrial.png');
+}
+.projects-page .projects-photo-hero::after { height: 2rem; }
+.projects-page .projects-photo-hero .page-title { max-width: 51rem; }
+.projects-page .projects-photo-hero .hero-actions { margin-top: 1.25rem; }
+.projects-page .projects-photo-hero + .section-shell { padding-top: 1.5rem; padding-bottom: 3rem; }
+.projects-page .split-heading { margin-bottom: 1rem; }
+.projects-page .project-card { border: 0; border-radius: 3px; background: #FFFFFF; box-shadow: 0 8px 24px rgba(29,29,27,.09); }
+.projects-page .project-card .project-card-image { aspect-ratio: 16 / 9; border: 0; }
+.projects-page .project-card .category-pill { background: #FEBB00; color: #1D1D1B; font-size: 12px; letter-spacing: .04em; }
+.projects-page .project-card .project-card-body { padding: 1.25rem; gap: .8rem; }
+.projects-page .project-card .project-card-meta { padding-top: .75rem; gap: .55rem; }
+.projects-page #catalogo { padding-top: 0; background: #f3f5f0; }
+.projects-page #catalogo .catalog-glass-panel { padding: 2.5rem 0; margin-bottom: 2.5rem; }
+.projects-page #catalogo .catalog-glass-panel::before {
+    background: linear-gradient(125deg, rgba(93,110,80,.3), rgba(93,110,80,.15)), #1D1D1B;
+}
+.projects-page #catalogo .catalog-glass-panel::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: calc((min(72rem, 100vw) - 100vw) / 2 - 1.5rem);
+    height: 100%;
+    width: min(35%, 22rem);
+    background: linear-gradient(133deg, transparent 58%, rgba(254,187,0,.6) 58%, rgba(254,187,0,.6) 58.4%, transparent 58.4%), repeating-linear-gradient(0deg, transparent 0 23px, rgba(255,255,255,.04) 23px 24px), repeating-linear-gradient(90deg, transparent 0 23px, rgba(255,255,255,.04) 23px 24px);
+    pointer-events: none;
+}
+.projects-page #catalogo .catalog-intro-panel .h2 { max-width: 52rem; }
+.projects-page #catalogo .catalog-intro-panel .h2 span { color: #FEBB00; }
+.projects-page #catalogo .catalog-intro-panel p { max-width: 52rem; }
+.projects-page .filter-row { gap: .75rem; }
+.projects-page .filter-chip { min-width: 6rem; padding: .65rem 1.25rem; }
+@media (max-width: 767px) {
+    body.projects-page .projects-photo-hero { padding: 2.5rem 0 3.5rem; min-height: 27rem; }
+    .projects-page #catalogo .catalog-glass-panel { padding: 2rem 0; }
+    .projects-page #catalogo .catalog-glass-panel::after { opacity: .4; }
+    .projects-page .filter-row { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+
+.projects-page .project-card .category-pill { background: #5D6E50; color: #FFFFFF; }
+
+/* Rótulo destacado y fondo con el verde corporativo exacto. */
+body.projects-page .split-heading .eyebrow {
+    font-weight: 800;
+    font-size: 16px;
+    letter-spacing: .09em;
+    color: #5D6E50;
+}
+.projects-page #catalogo .catalog-glass-panel::before { background: #5D6E50; }
+.projects-page #catalogo .catalog-glass-panel::after {
+    background: linear-gradient(133deg, transparent 58%, #FEBB00 58%, #FEBB00 58.4%, transparent 58.4%), repeating-linear-gradient(0deg, transparent 0 23px, rgba(255,255,255,.06) 23px 24px), repeating-linear-gradient(90deg, transparent 0 23px, rgba(255,255,255,.06) 23px 24px);
+}
+
+/* Portada amplia y trama técnica del catálogo con silueta de silos. */
+body.projects-page .projects-photo-hero {
+    min-height: max(38rem, 82vh);
+    padding: 5rem 0 6rem;
+    background-position: center 55%;
+}
+.projects-page .projects-photo-hero::after { height: clamp(4rem, 10vh, 6rem); }
+.projects-page #catalogo .catalog-glass-panel::after {
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: min(34%, 25rem);
+    opacity: .4;
+    background-image: url('./assets/equim-hero/silueta-silos.svg'), linear-gradient(133deg, transparent 38%, #FEBB00 38%, #FEBB00 38.4%, transparent 38.4%), repeating-linear-gradient(0deg, transparent 0 19px, rgba(255,255,255,.18) 19px 20px), repeating-linear-gradient(90deg, transparent 0 19px, rgba(255,255,255,.18) 19px 20px);
+    background-size: contain, auto, auto, auto;
+    background-position: right bottom, center, center, center;
+    background-repeat: no-repeat;
+}
+@media (min-width: 1100px) {
+    .projects-page #catalogo .catalog-intro-panel .h2,
+    .projects-page #catalogo .catalog-intro-panel p { max-width: 72%; }
+}
+@media (max-width: 767px) {
+    body.projects-page .projects-photo-hero { min-height: 35rem; padding: 3rem 0 5rem; }
+    .projects-page #catalogo .catalog-glass-panel::after { width: 60%; opacity: .16; }
+}
+
+/* Extender la trama hacia la izquierda sin mover la silueta. */
+@media (min-width: 768px) {
+    .projects-page #catalogo .catalog-glass-panel::after {
+        width: min(calc(34% + 4rem), 29rem);
+        background-size: calc(100% - 4rem) auto, auto, auto, auto;
+    }
+}
+
+/* Trama industrial compartida en los bloques corporativos aprobados. */
+.home-solutions-highlight,
+.about-page .stats-band,
+.about-page .team-highlight {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+.home-solutions-highlight::after,
+.about-page .stats-band::after,
+.about-page .team-highlight::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0 0 0 auto;
+    width: min(45%, 33rem);
+    pointer-events: none;
+    opacity: .3;
+    background-image: url('./assets/equim-hero/silueta-silos.svg'), repeating-linear-gradient(0deg, transparent 0 19px, rgba(255,255,255,.18) 19px 20px), repeating-linear-gradient(90deg, transparent 0 19px, rgba(255,255,255,.18) 19px 20px);
+    background-size: calc(100% - 4rem) auto, auto, auto;
+    background-position: right bottom, center, center;
+    background-repeat: no-repeat;
+}
+.about-page .team-highlight::after { width: 100%; background-size: min(70%, 55rem) auto, auto, auto; opacity: .24; }
+@media (max-width: 767px) {
+    .home-solutions-highlight::after,
+    .about-page .stats-band::after { width: 75%; opacity: .18; }
+    .about-page .team-highlight::after { opacity: .16; }
+}
+
+/* Nuestro equipo: únicamente cuadrícula, sin silueta. */
+.about-page .team-highlight::after {
+    background-image: repeating-linear-gradient(0deg, transparent 0 19px, rgba(255,255,255,.18) 19px 20px), repeating-linear-gradient(90deg, transparent 0 19px, rgba(255,255,255,.18) 19px 20px);
+    background-size: auto, auto;
+    background-position: center, center;
+}
+
+/* Indicadores de Nosotros: fondo limpio, sin trama ni silueta. */
+.about-page .stats-band::after { display: none; }
+
+/* Cinco integrantes con tarjetas amplias y filas equilibradas. */
+.team-highlight .team-grid-five { display: grid; grid-template-columns: 1fr; overflow: visible; }
+@media (min-width: 640px) {
+    .team-highlight .team-grid-five { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 1024px) {
+    .team-highlight .team-grid-five { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+    .team-highlight .team-grid-five > .surface-card { grid-column: span 2; }
+    .team-highlight .team-grid-five > .surface-card:nth-child(4) { grid-column: 2 / span 2; }
+    .team-highlight .team-grid-five > .surface-card:nth-child(5) { grid-column: 4 / span 2; }
+}
+
+/* Fichas de proyectos: encabezado corporativo con cuadrícula sutil. */
+body.illustrated-project-page .page-hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background: #5D6E50;
+    color: #FFFFFF;
+    padding-top: 2.5rem;
+    padding-bottom: 3rem;
+}
+.illustrated-project-page .page-hero::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: min(42%, 36rem);
+    background-image: repeating-linear-gradient(0deg, transparent 0 27px, rgba(255,255,255,.18) 27px 28px), repeating-linear-gradient(90deg, transparent 0 27px, rgba(255,255,255,.18) 27px 28px);
+    background-position: center, center;
+    background-size: auto, auto;
+    background-repeat: no-repeat;
+    opacity: .25;
+    pointer-events: none;
+}
+.illustrated-project-page .page-hero .text-link { display: block; width: fit-content; margin-bottom: 1.5rem; color: #FEBB00; }
+.illustrated-project-page .page-hero .eyebrow { color: #FFFFFF; }
+.illustrated-project-page .page-hero .page-title,
+.illustrated-project-page .page-hero .page-intro { color: #FFFFFF; }
+.illustrated-project-page .page-hero .page-title span { color: #FEBB00; }
+.illustrated-project-page .detail-gallery { grid-template-columns: repeat(3, minmax(0,1fr)); }
+.illustrated-project-page .detail-hero-image { border-radius: 3px; aspect-ratio: 16 / 9; object-fit: cover; }
+.illustrated-project-page .detail-gallery-image { border-radius: 3px; }
+.illustrated-project-page .detail-card { border-radius: 3px; }
+.illustrated-project-page .detail-brochures-links .btn-secondary { border-color: #FEBB00; }
+@media (max-width: 767px) {
+    .illustrated-project-page .page-hero::after { width: 75%; opacity: .12; }
+    .illustrated-project-page .detail-gallery { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
