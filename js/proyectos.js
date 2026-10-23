@@ -32,7 +32,6 @@
         <div class="project-card-body">
           <span class="category-pill">${categoryLabel[project.category] || project.category}</span>
           <h3 class="project-card-title h4 font-playfair-display">${project.title}</h3>
-          <p>${project.summary}</p>
           <div class="project-card-meta">
             <span><strong>Ubicación:</strong> ${project.location}</span>
             <span><strong>Cliente:</strong> ${project.client}</span>
@@ -45,7 +44,7 @@
 
   function renderInto(selector, items) {
     document.querySelectorAll(selector).forEach((container) => {
-      container.innerHTML = items.map(renderCard).join("");
+      container.innerHTML = items.map((project) => renderCard(project)).join("");
     });
   }
 
@@ -61,7 +60,7 @@
         ? projects
         : projects.filter((item) => item.category === filter);
 
-      grid.innerHTML = visibleProjects.map(renderCard).join("");
+      grid.innerHTML = visibleProjects.map((project) => renderCard(project)).join("");
 
       filterButtons.forEach((button) => {
         button.classList.toggle("is-active", button.dataset.projectFilter === filter);
@@ -89,6 +88,15 @@
       titleTarget.textContent = activeProject.title;
     }
 
+    document.body.classList.add("illustrated-project-page");
+
+    if (slugify(activeProject.title) === "horno-ciclonico-con-secadora-de-torre") {
+      document.body.classList.add("cyclone-project-page");
+      if (titleTarget) {
+        titleTarget.innerHTML = 'Horno ciclónico con <span>secadora de torre</span>';
+      }
+    }
+
     const galleryHtml = (activeProject.images && activeProject.images.length)
       ? `<div class="detail-gallery">
           ${activeProject.images.map((src) => `<img class="detail-gallery-image" src="${src}" alt="${activeProject.title}" loading="lazy">`).join("")}
@@ -114,6 +122,7 @@
           <span class="category-pill">${categoryLabel[activeProject.category] || activeProject.category}</span>
           <h2 class="h2 font-playfair-display mt-4">${activeProject.title}</h2>
           <p class="mt-4">${activeProject.summary}</p>
+          ${activeProject.capacity ? `<p>Con capacidad desde <strong>${activeProject.capacity}</strong></p>` : ""}
           <div class="detail-meta mt-6">
             <div class="detail-meta-item">
               <strong>Ubicación</strong>
@@ -139,75 +148,82 @@
       img.setAttribute("data-lightbox-src", img.getAttribute("src") || "");
     });
 
-    const lightboxState = {
-      overlay: null,
-      image: null,
-      closeButton: null
+    const photos = Array.from(detailContainer.querySelectorAll(".js-lightbox-trigger"));
+    let overlay;
+    let currentIndex = 0;
+    let opener;
+
+    const showPhoto = (index) => {
+      currentIndex = (index + photos.length) % photos.length;
+      const photo = photos[currentIndex];
+      overlay.querySelector(".lightbox-image").src = photo.dataset.lightboxSrc;
+      overlay.querySelector(".lightbox-image").alt = `${photo.alt} — Foto ${currentIndex + 1} de ${photos.length}`;
+      overlay.querySelector(".lightbox-counter").textContent = `${currentIndex + 1} / ${photos.length}`;
     };
 
     const closeLightbox = () => {
-      if (!lightboxState.overlay) {
-        return;
-      }
-      lightboxState.overlay.classList.remove("is-open");
-      lightboxState.overlay.setAttribute("aria-hidden", "true");
+      overlay.classList.remove("is-open");
+      overlay.setAttribute("aria-hidden", "true");
+      overlay.inert = true;
       document.body.classList.remove("lightbox-open");
+      if (opener) opener.focus();
     };
 
-    const openLightbox = (src, alt) => {
-      if (!src) {
-        return;
-      }
-
-      if (!lightboxState.overlay) {
-        const overlay = document.createElement("div");
+    const openLightbox = (index, trigger) => {
+      if (!overlay) {
+        overlay = document.createElement("div");
         overlay.className = "lightbox-overlay";
-        overlay.setAttribute("aria-hidden", "true");
         overlay.innerHTML = `
-          <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Imagen ampliada del proyecto">
-            <button type="button" class="lightbox-close" aria-label="Cerrar imagen">×</button>
-            <img class="lightbox-image" src="" alt="">
-          </div>
-        `;
+          <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Galería del proyecto">
+            <button type="button" class="lightbox-close" aria-label="Cerrar galería">×</button>
+            <img class="lightbox-image" alt="">
+            <div class="lightbox-navigation">
+              <button type="button" class="lightbox-prev" aria-label="Foto anterior">← Anterior</button>
+              <span class="lightbox-counter" role="status" aria-live="polite"></span>
+              <button type="button" class="lightbox-next" aria-label="Foto siguiente">Siguiente →</button>
+            </div>
+          </div>`;
         document.body.appendChild(overlay);
-
-        lightboxState.overlay = overlay;
-        lightboxState.image = overlay.querySelector(".lightbox-image");
-        lightboxState.closeButton = overlay.querySelector(".lightbox-close");
-
-        overlay.addEventListener("click", (event) => {
-          if (event.target === overlay) {
-            closeLightbox();
+        overlay.querySelector(".lightbox-close").addEventListener("click", closeLightbox);
+        overlay.querySelector(".lightbox-prev").addEventListener("click", () => showPhoto(currentIndex - 1));
+        overlay.querySelector(".lightbox-next").addEventListener("click", () => showPhoto(currentIndex + 1));
+        overlay.querySelectorAll(".lightbox-prev, .lightbox-next").forEach(button => { button.hidden = photos.length < 2; });
+        overlay.addEventListener("click", event => { if (event.target === overlay) closeLightbox(); });
+        document.addEventListener("keydown", event => {
+          if (!overlay.classList.contains("is-open")) return;
+          if (event.key === "Escape") closeLightbox();
+          if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+            event.preventDefault();
+            showPhoto(currentIndex + (event.key === "ArrowRight" ? 1 : -1));
+          }
+          if (event.key === "Tab") {
+            const buttons = Array.from(overlay.querySelectorAll("button")).filter(button => !button.hidden);
+            const first = buttons[0];
+            const last = buttons[buttons.length - 1];
+            if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+            else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
           }
         });
-
-        if (lightboxState.closeButton) {
-          lightboxState.closeButton.addEventListener("click", closeLightbox);
-        }
-
-        document.addEventListener("keydown", (event) => {
-          if (event.key === "Escape" && lightboxState.overlay && lightboxState.overlay.classList.contains("is-open")) {
-            closeLightbox();
-          }
-        });
       }
-
-      if (lightboxState.image) {
-        lightboxState.image.src = src;
-        lightboxState.image.alt = alt || "Imagen ampliada";
-      }
-
-      if (lightboxState.overlay) {
-        lightboxState.overlay.classList.add("is-open");
-        lightboxState.overlay.setAttribute("aria-hidden", "false");
-      }
-
+      opener = trigger;
+      showPhoto(index);
+      overlay.inert = false;
+      overlay.classList.add("is-open");
+      overlay.setAttribute("aria-hidden", "false");
       document.body.classList.add("lightbox-open");
+      overlay.querySelector(".lightbox-close").focus();
     };
 
-    detailContainer.querySelectorAll(".js-lightbox-trigger").forEach((image) => {
-      image.addEventListener("click", () => {
-        openLightbox(image.getAttribute("data-lightbox-src"), image.getAttribute("alt"));
+    photos.forEach((photo, index) => {
+      photo.tabIndex = 0;
+      photo.setAttribute("role", "button");
+      photo.setAttribute("aria-label", `Ampliar foto ${index + 1} de ${photos.length}: ${photo.alt}`);
+      photo.addEventListener("click", () => openLightbox(index, photo));
+      photo.addEventListener("keydown", event => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          openLightbox(index, photo);
+        }
       });
     });
 
@@ -217,7 +233,7 @@
         .filter((item) => item.title !== activeProject.title)
         .slice(0, Number(relatedContainer.dataset.projectRelated || 3));
 
-      relatedContainer.innerHTML = related.map(renderCard).join("");
+      relatedContainer.innerHTML = related.map((project) => renderCard(project)).join("");
     }
   }
 })();

@@ -23,7 +23,8 @@
     <link rel="shortcut icon" href="./assets/equim-brand/equim-favicon.svg">
     <link href="./css/vendors/aos.css" rel="stylesheet">
     <link href="./style.css" rel="stylesheet">
-    <link href="./equim.css" rel="stylesheet">
+    <link href="./equim.css?v=20261022-layout-final" rel="stylesheet">
+    <link href="./site-layout.css?v=20261023-proyectos-visuales" rel="stylesheet">
 </head>
 <body class="font-inter antialiased text-slate-900 tracking-tight">
     <div class="site-shell">
@@ -35,6 +36,9 @@
                         <img class="brand-logo" src="./assets/equim-brand/equim-logo-nuevo.png" alt="EQUIM-GRUMO">
                     </a>
                     <nav class="hidden md:flex md:items-center md:gap-2" aria-label="Navegación principal" data-site-nav="solutions"></nav>
+                    <div class="hidden md:block header-contact">
+                        <a class="btn-primary" href="contacto.html">Hablar con EQUIM-GRUMO</a>
+                    </div>
                     <div class="flex md:hidden" x-data="{ expanded: false }">
                         <button class="mobile-toggle" aria-controls="mobile-nav" :aria-expanded="expanded" @click.stop="expanded = !expanded">
                             <span class="sr-only">Abrir menú</span>
@@ -65,17 +69,18 @@
         </header>
 
         <main>
-            <section class="page-hero">
+            <section class="page-hero projects-photo-hero interior-home-preview solutions-photo-hero">
                 <div class="max-w-6xl mx-auto px-4 sm:px-6">
                     <span class="eyebrow">Soluciones</span>
-                    <h1 class="page-title font-playfair-display">La oferta técnica queda ordenada por frente de negocio.</h1>
+                    <h1 class="page-title font-playfair-display">Ingeniería especializada para <span>operaciones industriales</span></h1>
                     <p class="page-intro">
-                        EQUIM-GRUMO concentra su experiencia en tres líneas de trabajo: procesos agroindustriales de cereales, manejo portuario de granos y servicios de izaje, manipulación y montaje.
+                        Desarrollamos soluciones integrales para el procesamiento agroindustrial de cereales, el manejo portuario de granos y la ejecución de operaciones de izaje, manipulación y montaje industrial, integrando conocimiento técnico, equipos y experiencia en campo.
                     </p>
+                    <div class="hero-actions"><a class="btn-primary" href="#cereales">Explorar soluciones →</a></div>
                 </div>
             </section>
 
-            <section class="section-shell">
+            <section class="section-shell solutions-lines-section">
                 <div class="max-w-6xl mx-auto px-4 sm:px-6">
                     <div id="cereales" class="solution-detail">
                         <div>
@@ -83,7 +88,8 @@
                             <h2 class="h2 font-playfair-display">Equipos para procesos agroindustriales.</h2>
                         </div>
                         <div class="surface-card">
-                            <img class="solution-inline-image" src="./assets/equim-projects/cangilon-cereales.jpg" alt="Equipos para procesos agroindustriales de cereales">
+                            <figure class="solution-photo-frame"><div class="solution-photo-window"><img class="solution-inline-image" src="./assets/equim-projects/cangilon-cereales.jpg" alt="Equipos para procesos agroindustriales de cereales"></div></figure>
+                            <div class="solution-copy-panel">
                             <p>
                                 Desarrollo de equipos para recibo, elevación, transporte, pre-limpieza, limpieza, sistemas de secamiento, almacenamiento y molinería de arroz.
                             </p>
@@ -94,6 +100,7 @@
                                 <li>Hornos ciclónicos y sistemas de secamiento.</li>
                                 <li>Empacadoras y equipos auxiliares.</li>
                             </ul>
+                            </div>
                         </div>
                     </div>
 
@@ -103,7 +110,8 @@
                             <h2 class="h2 font-playfair-display">Manejo y transporte de granos en puerto marítimo.</h2>
                         </div>
                         <div class="surface-card">
-                            <img class="solution-inline-image" src="./assets/equim-projects/tolva-puerto.jpg" alt="Tolva granelera para operación portuaria">
+                            <figure class="solution-photo-frame"><div class="solution-photo-window"><img class="solution-inline-image" src="./assets/equim-projects/tolva-puerto.jpg" alt="Tolva granelera para operación portuaria"></div></figure>
+                            <div class="solution-copy-panel">
                             <p>
                                 Soluciones para el manejo, despacho y almacenamiento de granos en puertos marítimos, con equipos pensados para operación continua y movimiento de graneles.
                             </p>
@@ -113,6 +121,7 @@
                                 <li>Equipos para llenado de café a granel en contenedores.</li>
                                 <li>Sistemas de despacho y almacenamiento portuario.</li>
                             </ul>
+                            </div>
                         </div>
                     </div>
 
@@ -122,7 +131,8 @@
                             <h2 class="h2 font-playfair-display">Servicios de izaje, manipulación y montaje.</h2>
                         </div>
                         <div class="surface-card">
-                            <img class="solution-inline-image" src="./assets/equim-hero/hero-grua-tolvas.jpg" alt="Montaje con grúa y tolvas en operación de EQUIM-GRUMO">
+                            <figure class="solution-photo-frame"><div class="solution-photo-window"><img class="solution-inline-image" src="./assets/equim-hero/hero-grua-tolvas.jpg" alt="Montaje con grúa y tolvas en operación de EQUIM-GRUMO"></div></figure>
+                            <div class="solution-copy-panel">
                             <p>
                                 Flota propia de grúas telescópicas tipo PH de 30, 50, 70, 75 y 100 toneladas, además de camión grúas y equipos auxiliares para montaje y movilización.
                             </p>
@@ -132,6 +142,7 @@
                                 <li>Gatos hidráulicos con motobomba.</li>
                                 <li>Montaje y movilización para proyectos en campo.</li>
                             </ul>
+                            </div>
                         </div>
                     </div>
                 </div>

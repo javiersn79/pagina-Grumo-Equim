@@ -23,9 +23,10 @@
     <link rel="shortcut icon" href="./assets/equim-brand/equim-favicon.svg">
     <link href="./css/vendors/aos.css" rel="stylesheet">
     <link href="./style.css" rel="stylesheet">
-    <link href="./equim.css" rel="stylesheet">
+    <link href="./equim.css?v=20261022-layout-final" rel="stylesheet">
+    <link href="./site-layout.css?v=20261023-trama-compartida" rel="stylesheet">
 </head>
-<body class="font-inter antialiased text-slate-900 tracking-tight">
+<body class="home-page font-inter antialiased text-slate-900 tracking-tight">
     <div class="site-shell">
         <header class="site-header">
             <div class="max-w-6xl mx-auto px-4 sm:px-6">
@@ -35,7 +36,7 @@
                         <img class="brand-logo" src="./assets/equim-brand/equim-logo-nuevo.png" alt="EQUIM-GRUMO">
                     </a>
                     <nav class="hidden md:flex md:items-center md:gap-2" aria-label="Navegación principal" data-site-nav="home"></nav>
-                    <div class="hidden md:block">
+                    <div class="hidden md:block header-contact">
                         <a class="btn-primary" href="contacto.html">Hablar con EQUIM-GRUMO</a>
                     </div>
                     <div class="flex md:hidden" x-data="{ expanded: false }">
@@ -73,9 +74,9 @@
                     <div class="hero-grid">
                         <div data-aos="fade-right">
                             <span class="eyebrow">Más de 60 años brindando soluciones a la agroindustria</span>
-                            <h1 class="hero-title font-playfair-display">Soluciones para manejar cereales en puertos y plantas con criterio técnico y experiencia de campo.</h1>
+                            <h1 class="hero-title font-playfair-display">Soluciones para manejar cereales en <span>puertos y plantas</span> con criterio técnico y experiencia de campo.</h1>
                             <p class="hero-copy">
-                                EQUIM-GRUMO es un grupo empresarial colombiano especializado en el diseño, fabricación y montaje de equipos para proyectos agroindustriales, manejo y despacho de granos en puertos marítimos y servicios de izaje, manipulación y movilización de carga y equipos.
+                                Con más de 60 años de experiencia, EQUIM-GRUMO desarrolla y ejecuta proyectos de ingeniería para la agroindustria y el manejo de granos. Integramos diseño, fabricación, montaje y operación en campo para responder a las exigencias de plantas industriales y puertos marítimos.
                             </p>
                             <div class="hero-actions">
                                 <a class="btn-primary" href="soluciones.html">Ver soluciones</a>
@@ -90,26 +91,11 @@
                                 <li>Izaje</li>
                             </ul>
                         </div>
-                        <div class="hero-visual-cluster" data-aos="fade-left">
-                            <figure class="hero-visual hero-visual-main hero-visual-translucent">
-                                <img
-                                    class="hero-image-silos hero-image-silos-main"
-                                    src="./assets/equim-hero/hero-silos-gemini.png"
-                                    alt="Silos de almacenamiento y torre de proceso en instalación agroindustrial"
-                                >
-                            </figure>
-                            <figure class="hero-visual hero-visual-offset hero-visual-support">
-                                <img
-                                    class="hero-image-crane hero-image-crane-offset"
-                                    src="./assets/equim-hero/hero-grua-tolvas.jpg"
-                                    alt="Montaje de tolvas industriales con grúa telescópica en operación de EQUIM-GRUMO"
-                                >
-                            </figure>
                             <div class="hero-panel">
                                 <span class="eyebrow">Almacenamiento, montaje y operación real</span>
-                                <h2 class="h3 font-playfair-display">Soluciones de escala industrial con experiencia real en campo.</h2>
+                                <h2 class="h3 font-playfair-display">Experiencia para proyectos de alta exigencia.</h2>
                                 <p>
-                                    Silos, torres de proceso, izaje y montaje en campo muestran mejor el alcance real de EQUIM-GRUMO: soluciones donde almacenamiento, fabricación e instalación se integran en una misma ejecución.
+                                    Silos, torres de proceso, izaje y montaje en campo reflejan el alcance de la empresa: integramos fabricación, instalación y ejecución para responder a las exigencias de cada proyecto.
                                 </p>
                                 <div class="hero-metrics">
                                     <article>
@@ -126,7 +112,6 @@
                                     </article>
                                 </div>
                             </div>
-                        </div>
                     </div>
                 </div>
             </section>
@@ -179,11 +164,11 @@
                 </div>
             </section>
 
-            <section class="section-shell section-soft">
+            <section class="section-shell section-soft home-solutions-highlight">
                 <div class="max-w-6xl mx-auto px-4 sm:px-6">
                     <div class="section-heading">
                         <span class="eyebrow">Líneas de solución</span>
-                        <h2 class="h2 font-playfair-display">Soluciones organizadas según la necesidad de operación.</h2>
+                        <h2 class="h2 font-playfair-display">Soluciones según la operación</h2>
                         <p>
                             La experiencia de EQUIM-GRUMO se concentra en sectores donde la continuidad operativa y la confiabilidad del equipo sí importan.
                         </p>
@@ -216,7 +201,7 @@
                     <div class="section-heading split-heading">
                         <div>
                             <span class="eyebrow">Proyectos destacados</span>
-                            <h2 class="h2 font-playfair-display">Experiencia visible en proyectos documentados.</h2>
+                            <h2 class="h2 font-playfair-display">Proyectos que respaldan nuestra experiencia</h2>
                         </div>
                         <a class="text-link" href="proyectos.html">Ver todos los proyectos</a>
                     </div>
@@ -228,9 +213,9 @@
                 <div class="max-w-6xl mx-auto px-4 sm:px-6">
                     <div class="section-heading section-heading-dark">
                         <span class="eyebrow">Clientes y trayectoria</span>
-                        <h2 class="h2 font-playfair-display">Relaciones construidas con empresas del sector agroindustrial y logístico.</h2>
+                        <h2 class="h2 font-playfair-display">Experiencia que construye relaciones de confianza.</h2>
                         <p>
-                            EQUIM-GRUMO ha trabajado con empresas y operaciones vinculadas a arroz, graneles, almacenamiento, logística y exportación tanto en Colombia como en otros mercados.
+                            Una trayectoria respaldada por proyectos para los sectores agroindustrial, arrocero, portuario y logístico, con participación en operaciones de almacenamiento, manejo de graneles y exportación en Colombia y otros mercados.
                         </p>
                     </div>
                     <div class="client-grid" data-client-grid></div>
@@ -275,6 +260,6 @@
     <script src="./js/site-render.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/proyectos-data.js"></script>
-    <script src="./js/proyectos.js"></script>
+    <script src="./js/proyectos.js?v=20261023-tarjetas-sin-descripcion"></script>
 </body>
 </html>

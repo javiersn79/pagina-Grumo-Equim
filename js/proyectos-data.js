@@ -39,8 +39,9 @@ window.EQUIM_PROJECTS = [
   {
     title: "Tolvas graneleras móviles",
     photo: "./assets/equim-projects/tolvas-graneleras-moviles-1.png",
-    summary: "Recepción, almacenamiento temporal y descarga controlada de granos y fertilizantes, con capacidades de 40 m³ a 60 m³.",
-    location: "Tolú, Sucre",
+    summary: "La tolva móvil es un equipo diseñado para la recepción, almacenamiento temporal y descarga controlada de materiales a granel seco, como cereales y fertilizantes. Permite recibir el producto desde buques mediante cucharas mecánicas y realizar una alimentación eficiente de los camiones de transporte. Su diseño, con paredes internas inclinadas y una adecuada altura de descarga, facilita el flujo continuo del material, optimizando las operaciones de cargue y transferencia.",
+    capacity: "40m³ a 60m³",
+    location: "Puerto Antioquia, Tolú, Cartagena",
     client: "Proyectos portuarios",
     category: "puertos",
     featured: true,
@@ -48,7 +49,7 @@ window.EQUIM_PROJECTS = [
       "./assets/equim-projects/tolvas-graneleras-moviles-2.png",
       "./assets/equim-projects/tolvas-graneleras-moviles-3.png",
       "./assets/equim-projects/tolvas-graneleras-moviles-4.png",
-      "./assets/equim-projects/tolvas-graneleras-moviles-5.png",
+      "./assets/equim-projects/tolvas-graneleras-moviles-5-mar-verde-azulado.png",
       "./assets/equim-projects/tolvas-graneleras-moviles-6.png"
     ]
   },

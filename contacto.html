@@ -23,7 +23,8 @@
     <link rel="shortcut icon" href="./assets/equim-brand/equim-favicon.svg">
     <link href="./css/vendors/aos.css" rel="stylesheet">
     <link href="./style.css" rel="stylesheet">
-    <link href="./equim.css" rel="stylesheet">
+    <link href="./equim.css?v=20261022-layout-final" rel="stylesheet">
+    <link href="./site-layout.css?v=20261023-proyectos-visuales" rel="stylesheet">
 </head>
 <body class="font-inter antialiased text-slate-900 tracking-tight">
     <div class="site-shell">
@@ -35,6 +36,9 @@
                         <img class="brand-logo" src="./assets/equim-brand/equim-logo-nuevo.png" alt="EQUIM-GRUMO">
                     </a>
                     <nav class="hidden md:flex md:items-center md:gap-2" aria-label="Navegación principal" data-site-nav="contact"></nav>
+                    <div class="hidden md:block header-contact">
+                        <a class="btn-primary" href="contacto.html">Hablar con EQUIM-GRUMO</a>
+                    </div>
                     <div class="flex md:hidden" x-data="{ expanded: false }">
                         <button class="mobile-toggle" aria-controls="mobile-nav" :aria-expanded="expanded" @click.stop="expanded = !expanded">
                             <span class="sr-only">Abrir menú</span>
@@ -65,17 +69,18 @@
         </header>
 
         <main>
-            <section class="page-hero">
+            <section class="page-hero projects-photo-hero interior-home-preview contact-photo-hero">
                 <div class="max-w-6xl mx-auto px-4 sm:px-6">
                     <span class="eyebrow">Contacto</span>
-                    <h1 class="page-title font-playfair-display">Datos directos para hablar con EQUIM-GRUMO.</h1>
+                    <h1 class="page-title font-playfair-display">Datos<br><span>EQUIM-GRUMO</span></h1>
                     <p class="page-intro">
                         Fábrica y oficinas en Bucaramanga para atención comercial, información general y consultas asociadas a proyectos y servicios.
                     </p>
+                    <div class="hero-actions"><a class="btn-primary" href="#canales-contacto">Ver canales de contacto →</a></div>
                 </div>
             </section>
 
-            <section class="section-shell">
+            <section id="canales-contacto" class="section-shell">
                 <div class="max-w-6xl mx-auto px-4 sm:px-6">
                     <div class="contact-layout">
                         <div class="contact-stack">
